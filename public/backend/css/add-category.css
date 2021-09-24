@@ -1,0 +1,46 @@
+.panel {
+    overflow-y: hidden;
+    padding: 50px 320px;
+    width: 100%;
+    height: 100%;
+}
+
+.panel-heading {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+}
+
+.form-group > label {
+    display: block;
+}
+.form-group:first-child {
+    padding-bottom: 10px;
+}
+.form-group > input {
+    display: block;
+    width: 400px;
+    margin: 10px 0;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+
+.submit {
+    cursor: pointer;
+    margin-top: 30px;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(180, 147, 102);
+    color: #fff !important;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    transition: 1s;
+}
+.anhien{
+    width: 200px;
+}
