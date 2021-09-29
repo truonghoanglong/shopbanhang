@@ -79,6 +79,7 @@
                 </a>
             </li> --}}
 
+            {{-- Danh mục sản phẩm --}}
             <li class="sidebar-submenu">
                 <a href="{{URL::to('dashboard')}}" class="sidebar-menu-dropdown">
                     <i class='bx bxs-bar-chart-alt-2'></i>
@@ -99,47 +100,47 @@
                     
                 </ul>
             </li>
+
+            {{-- Thương hiệu sản phẩm --}}
             <li class="sidebar-submenu">
                 <a href="#" class="sidebar-menu-dropdown">
                     <i class='bx bx-category'></i>
-                    <span>project</span>
+                    <span>Thương Hiệu Sản Phẩm</span>
                     <div class="dropdown-icon"></div>
                 </a>
                 <ul class="sidebar-menu sidebar-menu-dropdown-content">
                     <li>
-                        <a href="#">
-                            list
+                        <a href="{{URL::to('add-brand-product')}}">
+                            Thêm Thương Hiệu Sản Phẩm
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            add project
+                        <a href="{{URL::to('all-brand-product')}}">
+                            Liệt Kê Thương Hiệu Sản Phẩm
                         </a>
                     </li>
                 </ul>
             </li>
+
+            {{-- Sản Phẩm --}}
             <li class="sidebar-submenu">
                 <a href="#" class="sidebar-menu-dropdown">
                     <i class='bx bx-category'></i>
-                    <span>e-commerce</span>
+                    <span>Sản Phẩm</span>
                     <div class="dropdown-icon"></div>
                 </a>
                 <ul class="sidebar-menu sidebar-menu-dropdown-content">
                     <li>
-                        <a href="#">
-                            list product
+                        <a href="{{URL::to('add-product')}}">
+                            Thêm Sản Phẩm
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            add product
+                        <a href="{{URL::to('all-product')}}">
+                            Liệt Kê Sản Phẩm
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
-                            orders
-                        </a>
-                    </li>
+                    
                 </ul>
             </li>
             <li>

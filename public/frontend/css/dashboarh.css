@@ -497,3 +497,12 @@ table td {
 .delete{
     color: red;
 }
+label {
+    margin: 20px 0;
+}
+.anhien {
+    width: 420px;
+}
+label {
+    margin: 7px 0px;
+}
