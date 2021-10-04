@@ -9,7 +9,8 @@
                 <div class="panel-body">
                    
                     <div class="position-center">
-                    <form role="form" action="{{URL::to('/save-category-product')}}" method="post">
+                    <form role="form" action="{{URL::to('/save-product')}}" method="post" enctype="multipart/
+                    form-data">
                         {{csrf_field()}}
                         <div class="form-group">
                             <label for="exampleInputEmail1">Tên Sản Phẩm</label>
@@ -36,18 +37,25 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Hiển Thị</label>
-                            <select class="anhien" name="product_status">
-                                <option value="0">Name</option>
-                                <option value="1">Nữ</option>
+                            <label>Danh Mục Sản Phẩm</label>
+                            <select class="anhien" name="product_cate">
+                                @foreach($cate_product as $key => $cate)
+
+                                <option value="{{$cate->category_id}}">{{$cate->category_name}}</option>
+                               
+                                @endforeach
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label>Hiển Thị</label>
-                            <select class="anhien" name="product_status">
-                                <option value="0">Dell</option>
-                                <option value="1">SamSum</option>
+                            <label>Thương Hiệu Sản Phẩm</label>
+                            <select class="anhien" name="product_brand">
+
+                                @foreach($brand_product as $key => $brand)
+
+                                <option value="{{$brand->brand_id}}">{{$brand->brand_name}}</option>
+                    
+                                @endforeach
                             </select>
                         </div>
                         
