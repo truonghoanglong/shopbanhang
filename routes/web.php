@@ -57,7 +57,7 @@ Route::post('/update-brand-product/{brand_product_id}','BrandProduct@update_bran
 //product
 Route::get('/add-product','ProductController@add_product');
 Route::get('/edit-product/{product_id}','ProductController@edit_product');
-Route::get('/delete-product/{product_id}','ProductController@delete__product');
+Route::get('/delete-product/{product_id}','ProductController@delete_product');
 Route::get('/all-product','ProductController@all_product');
 
 Route::get('/unactive-product/{product_id}','ProductController@unactive_product');

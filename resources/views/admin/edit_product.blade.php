@@ -9,29 +9,31 @@
                 <div class="panel-body">
                    
                     <div class="position-center">
-                    <form role="form" action="{{URL::to('/update-product')}}" method="post" enctype="multipart/form-data">
+                    @foreach($edit_product as $key => $pro)
+                    <form role="form" action="{{URL::to('/update-product/'.$pro->product_id)}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
                         <div class="form-group">
                             <label for="exampleInputEmail1">Tên Sản Phẩm</label>
-                            <input type="text" class="form-control" name="product_name" placeholder="Tên Sản Phẩm">
+                            <input type="text" class="form-control" name="product_name" value="{{$pro->product_name}}">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Giá Sản Phẩm</label>
-                            <input type="text" class="form-control" name="product_price" placeholder="Giá Sản Phẩm">
+                            <input type="text" class="form-control" name="product_price" value="{{$pro->product_price}}">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Hình Ảnh Sản Phẩm</label>
                             <input type="file" class="form-control" name="product_image">
+                            <img src="{{URL::to('public/uploads/product/'.$pro->product_image)}}" height="100px" width="100px" />
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Mô Tả Sản Phẩm</label>
-                            <textarea style="resize:none" name="product_desc" cols="55" rows="7"placeholder="Mô Tả Sản Phẩm"></textarea>
+                            <textarea style="resize:none" name="product_desc" cols="55" rows="7" >{{$pro->product_desc}}</textarea>
                             {{-- <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> --}}
                         </div>
 
                         <div class="form-group">
                             <label for="exampleInputPassword1">Nội Dung Sản Phẩm</label>
-                            <textarea style="resize:none" name="product_content" cols="55" rows="7"placeholder="Nội Dung Sản Phẩm"></textarea>
+                            <textarea style="resize:none" name="product_content" cols="55" rows="7">{{$pro->product_content}}</textarea>
                             {{-- <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> --}}
                         </div>
 
@@ -39,9 +41,11 @@
                             <label>Danh Mục Sản Phẩm</label>
                             <select class="anhien" name="product_cate">
                                 @foreach($cate_product as $key => $cate)
-
-                                <option value="{{$cate->category_id}}">{{$cate->category_name}}</option>
-                               
+                                    @if($cate->category_id == $pro->category_id)
+                                        <option selected value="{{$cate->category_id}}">{{$cate->category_name}}</option>
+                                    @else
+                                        <option value="{{$cate->category_id}}">{{$cate->category_name}}</option>
+                                    @endif
                                 @endforeach
                             </select>
                         </div>
@@ -51,9 +55,11 @@
                             <select class="anhien" name="product_brand">
 
                                 @foreach($brand_product as $key => $brand)
-
-                                <option value="{{$brand->brand_id}}">{{$brand->brand_name}}</option>
-                    
+                                    @if($cate->category_id == $pro->category_id)
+                                        <option selected value="{{$brand->brand_id}}">{{$brand->brand_name}}</option>
+                                    @else
+                                        <option value="{{$brand->brand_id}}">{{$brand->brand_name}}</option>
+                                        @endif
                                 @endforeach
                             </select>
                         </div>
@@ -75,6 +81,7 @@
                             }
 					    ?> 
                     </form>
+                    @endforeach
                     </div>
 
                 </div>

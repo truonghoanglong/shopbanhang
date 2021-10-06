@@ -80,7 +80,7 @@
 
               <td>
                 <a href="{{URL::to('/edit-product/'.$pro->product_id)}}" class="active edit" ><i class='bx bx-pencil'></i></a>
-                <a onclick="return confirm('Bạn có chắc muốn xóa danh mục sản phẩm')" href="{{URL::to('/delete-brand-product/'.$pro->product_id)}}" class="delete"><i class='bx bx-x' ></i></a>
+                <a onclick="return confirm('Bạn có chắc muốn xóa sản phẩm hay không')" href="{{URL::to('/delete-product/'.$pro->product_id)}}" class="delete"><i class='bx bx-x' ></i></a>
               </td>
             @endforeach
           </tbody>
