@@ -4,12 +4,12 @@
     <div class="col-lg-12">
             <section class="panel">
                 <header class="panel-heading">
-                    Thêm Sản Phẩm
+                    Cập Nhật Sản Phẩm Sản Phẩm
                 </header>
                 <div class="panel-body">
                    
                     <div class="position-center">
-                    <form role="form" action="{{URL::to('/save-product')}}" method="post" enctype="multipart/form-data">
+                    <form role="form" action="{{URL::to('/update-product')}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
                         <div class="form-group">
                             <label for="exampleInputEmail1">Tên Sản Phẩm</label>
@@ -66,7 +66,7 @@
                             </select>
                         </div>
                         
-                        <button type="submit" class="submit" name="add_product">Thêm Sản Phẩm</button> <br> <br> <br> <br> 
+                        <button type="submit" class="submit" name="add_product">Cập Nhật Sản Phẩm</button> <br> <br> <br> <br> 
                         <?php 
                             $message = Session::get('message');
                             if($message){
