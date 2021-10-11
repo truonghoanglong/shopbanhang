@@ -3,7 +3,7 @@
 
 <!-- promotion section -->
 <div class="promotion">
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-4 col-md-12 col-sm-12">
             <div class="promotion-box">
                 <div class="text">
@@ -31,7 +31,7 @@
                 <img src="{{('public/frontend/images/JBL_TUNE220TWS_ProductImage_Pink_ChargingCaseOpen.png')}}" alt="">
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 <!-- end promotion section -->
 
@@ -40,14 +40,17 @@
 <div class="section">
     <div class="container">
         <div class="section-header">
-            <h2>Latest product</h2>
+            <h2>Danh mục sản phẩm</h2>
         </div>
+
+       
         <div class="row" id="latest-products">
+            @foreach($all_product as $key => $product)
             <div class="col-3 col-md-6 col-sm-12">
                 <div class="product-card">
                     <div class="product-card-img">
-                        <img src="{{('public/frontend/images/JBL_Quantum_400_Product Image_Hero 02.png')}}" alt="">
-                        <img src="{{('public/frontend/images/JBL_Quantum_400_Product Image_Hero 02.png')}}" alt="">
+                        <img src="{{('public/uploads/product/'.$product->product_image)}}" alt="">
+                        <img src="{{('public/uploads/product/'.$product->product_image)}}" alt="">
                     </div>
                     <div class="product-card-info">
                         <div class="product-btn">
@@ -60,19 +63,20 @@
                             </button>
                         </div>
                         <div class="product-card-name">
-                            JBL Quantum 400
+                            {{$product->product_name}}
                         </div>
                         <div class="product-card-price">
-                            <span><del>$300</del></span>
-                            <span class="curr-price">$200</span>
+                            <span><del>{{number_format($product->product_price).'VND'}}</del></span>
+                            <span class="curr-price">{{number_format($product->product_price).' VND'}}</span>
                         </div>
                     </div>
                 </div>
             </div>
-
-            
-            
+            @endforeach
         </div>
+        
+
+
         <div class="section-footer">
             <a href="./products.html" class="btn-flat btn-hover">view all</a>
         </div>

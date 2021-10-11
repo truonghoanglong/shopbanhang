@@ -78,7 +78,7 @@ class ProductController extends Controller
         $this->AuthLogin();
 
         DB::table('tbl_product')->where('product_id',$product_id)->update(['product_status'=>1]);
-        Session::put('message','Không kích hoạt sản phẩm');
+        Session::put('message','Kích hoạt sản phẩm');
         return redirect::to('all-product');
     }
 
@@ -86,7 +86,7 @@ class ProductController extends Controller
         $this->AuthLogin();
 
         DB::table('tbl_product')->where('product_id',$product_id)->update(['product_status'=>0]);
-        Session::put('message','Kích hoạt sản phẩm');
+        Session::put('message','Không kích hoạt sản phẩm');
         return redirect::to('all-product');
     }
     
