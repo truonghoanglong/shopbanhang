@@ -15,8 +15,13 @@
 //  -------------------FRONT-END--------------------------------
 
 Route::get('/', 'HomeController@index');
+Route::get('/product-show', 'HomeController@product_show');
+Route::get('/trang-chu','HomeController@index');
 
-Route::get('trang-chu','HomeController@index');
+
+// ----------------Danh mục sản phẩm trang chủ---------------------------
+Route::get('/danh-muc-san-pham/{category_id}','CategoryProduct@show_category_home');
+
 
 
 //  -------------------BACK-END--------------------------------

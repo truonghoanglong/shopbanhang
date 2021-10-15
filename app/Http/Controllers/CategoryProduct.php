@@ -88,4 +88,17 @@ class CategoryProduct extends Controller
         Session::put('message','Xoá danh mục sản phẩm thành công');
         return redirect::to('all-category-product');
     }
+
+    //End function Home admin page
+
+
+    public function show_category_home($category_id){
+        $cate_product = DB::table('tbl_category_product')->where('category_status',1)->orderBy('category_id','desc')->get();
+
+        $brand_product = DB::table('tbl_brand')->where('brand_status',1)->orderBy('brand_id','desc')->get();
+
+        $category_by_id = DB::table('tbl_product')->join('tbl_category_product','tbl_product.category_id','=','tbl_category_product.category_id')->where('tbl_product.category_id',$category_id)->get();
+ 
+        return view('pages.category.show_category')->with('category',$cate_product)->with('brand',$brand_product)->with('category_by_id',$category_by_id);
+    }   
 }

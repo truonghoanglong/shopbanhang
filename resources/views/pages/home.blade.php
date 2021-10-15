@@ -39,6 +39,7 @@
 <!-- product list -->
 <div class="section">
     <div class="container">
+        
         <div class="section-header">
             <h2>Danh mục sản phẩm</h2>
         </div>
@@ -78,7 +79,7 @@
 
 
         <div class="section-footer">
-            <a href="./products.html" class="btn-flat btn-hover">view all</a>
+            <a href="{{URL::to('product-show')}}" class="btn-flat btn-hover">view all</a>
         </div>
     </div>
 </div>

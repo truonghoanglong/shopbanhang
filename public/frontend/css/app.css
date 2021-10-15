@@ -1170,3 +1170,48 @@ footer ul li {
         height: unset;
     }
 }
+
+
+
+
+/* navvvvvvvvvvvv */
+
+nav.vertical{
+    position:relative;
+    background:transparent;
+  }
+  
+  /* ALL UL */
+  nav.vertical ul{
+    list-style: none;
+  }
+  /* ALL LI */
+  nav.vertical li{
+    position:relative;
+  }
+  /* ALL A */
+  nav.vertical a{
+    display:block;
+    color:rgb(0, 0, 0);
+    text-decoration:none;
+    padding:10px 15px;
+    transition:0.2s;
+  }
+  /* ALL A HOVER */
+  nav.vertical li:hover > a{
+    background:transparent;
+  }
+  
+  /* INNER UL HIDE */
+  nav.vertical ul ul{
+    background:rgba(0,0,0,0.1);
+    padding-left:20px;
+    transition: max-height 0.2s ease-out;
+    max-height:0;
+    overflow:hidden;
+  }
+  /* INNER UL SHOW */
+  nav.vertical li:hover > ul{
+    max-height:500px;
+    transition: max-height 0.25s ease-in;
+  }
