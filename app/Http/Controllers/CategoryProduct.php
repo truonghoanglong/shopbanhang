@@ -91,7 +91,7 @@ class CategoryProduct extends Controller
 
     //End function Home admin page
 
-
+    //Lọc   
     public function show_category_home($category_id){
         $cate_product = DB::table('tbl_category_product')->where('category_status',1)->orderBy('category_id','desc')->get();
 
@@ -101,4 +101,6 @@ class CategoryProduct extends Controller
  
         return view('pages.category.show_category')->with('category',$cate_product)->with('brand',$brand_product)->with('category_by_id',$category_by_id);
     }   
+
+    
 }

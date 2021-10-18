@@ -20,7 +20,7 @@
                     </div>
                     <div class="box">
                         <span class="filter-header">
-                            Danh Mục Sản Phẩm        
+                            Thương Hiệu Sản Phẩm        
                         </span>
                         @foreach($category as $key => $cate) 
                         {{-- @foreach($all_product as $key => $product) --}}
@@ -293,35 +293,39 @@
 
                     {{-- product --}}
                     <div class="row" id="latest-products">
-                        @foreach($category_by_id as $key => $product)
-                        <div class="col-3 col-md-6 col-sm-12">
-                            <a href="{{URL::to('/chi-tiet-san-pham/'.$product->product_id)}}">
-                                <div class="product-card">
-                                    <div class="product-card-img">
-                                        <img src="{{asset('public/uploads/product/'.$product->product_image)}}" alt="none">
-                                        <img src="{{asset('public/uploads/product/'.$product->product_image)}}" alt="none">
-                                    </div>
-                                    <div class="product-card-info">
-                                        <div class="product-btn">
-                                            <button class="btn-flat btn-hover btn-shop-now">shop now</button>
-                                            <button class="btn-flat btn-hover btn-cart-add">
-                                                <i class='bx bxs-cart-add'></i>
-                                            </button>
-                                            <button class="btn-flat btn-hover btn-cart-add">
-                                                <i class='bx bxs-heart'></i>
-                                            </button>
+                        @foreach($brand_by_id as $key => $product)
+                        
+                            <div class="col-3 col-md-6 col-sm-12">
+                                <a href="{{URL::to('/chi-tiet-san-pham/'.$product->product_id)}}">
+                                    <div class="product-card">
+                                        <div class="product-card-img">
+                                            <img src="{{asset('public/uploads/product/'.$product->product_image)}}" alt="none">
+                                            <img src="{{asset('public/uploads/product/'.$product->product_image)}}" alt="none">
                                         </div>
-                                        <div class="product-card-name">
-                                            {{$product->product_name}}
+                                        <div class="product-card-info">
+                                            <div class="product-btn">
+                                                <button class="btn-flat btn-hover btn-shop-now">shop now</button>
+                                                <button class="btn-flat btn-hover btn-cart-add">
+                                                    <i class='bx bxs-cart-add'></i>
+                                                </button>
+                                                <button class="btn-flat btn-hover btn-cart-add">
+                                                    <i class='bx bxs-heart'></i>
+                                                </button>
+                                            </div>
+                                            <div class="product-card-name">
+                                                {{$product->product_name}}
+                                            </div>
+                                            <div class="product-card-price">
+                                                <span><del>{{number_format($product->product_price).'VND'}}</del></span>
+                                                <span class="curr-price">{{number_format($product->product_price).' VND'}}</span>
+                                            </div>
                                         </div>
-                                        <div class="product-card-price">
-                                            <span><del>{{number_format($product->product_price).'VND'}}</del></span>
-                                            <span class="curr-price">{{number_format($product->product_price).' VND'}}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                                    </div>  
+                                </a>
+                                
+
+                            </div>
+                                            
                         @endforeach
                     </div>
                     {{-- end-product --}}

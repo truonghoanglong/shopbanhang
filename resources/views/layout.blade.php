@@ -177,7 +177,7 @@
     <!-- end header -->
 
     <!-- hero section -->
-    <div class="hero">
+    {{-- <div class="hero">
         <div class="slider">
             <div class="container">
                 <!-- slide item -->
@@ -201,7 +201,7 @@
                         </div>
                     </div>
                     <div class="img top-down">
-                        <img src="{{('public/frontend/images/JBL_E55BT_KEY_RED_6063_FS_x1-1605x1605px.webp')}}" alt="">
+                        <img src="{{asset('public/frontend/images/JBL_E55BT_KEY_RED_6063_FS_x1-1605x1605px.webp')}}" alt="">
                     </div>
                 </div>
                 <!-- end slide item -->
@@ -226,7 +226,7 @@
                         </div>
                     </div>
                     <div class="img right-left">
-                        <img src="{{('public/frontend/images/JBL_E55BT_KEY_BLACK_6175_FS_x1-1605x1605px.png')}}" alt="">
+                        <img src="{{asset('public/frontend/images/JBL_E55BT_KEY_BLACK_6175_FS_x1-1605x1605px.png')}}" alt="">
                     </div>
                 </div>
                 <!-- end slide item -->
@@ -251,7 +251,7 @@
                         </div>
                     </div>
                     <div class="img left-right">
-                        <img src="{{('public/frontend/images/JBL_JR 310BT_Product Image_Hero_Skyblue.png')}}" alt="">
+                        <img src="{{asset('public/frontend/images/JBL_JR 310BT_Product Image_Hero_Skyblue.png')}}" alt="">
                     </div>
                 </div>
                 <!-- end slide item -->
@@ -265,7 +265,7 @@
             </button>
             <!-- end slider controller -->
         </div>
-    </div>
+    </div> --}}
     <!-- end hero section -->
 
         @yield('content')
