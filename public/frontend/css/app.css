@@ -232,7 +232,6 @@ ul.devided > li:last-child {
     transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-
 .mega-content h3 {
     margin: 20px 0;
     padding-left: 20px;
@@ -905,6 +904,32 @@ footer ul li {
     overflow-y: hidden;
     position: relative;
 }
+.product-detail-description-content-sp {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-detail-description-content-sp .sp-lienquan{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 20px;
+    width: 30%;
+}
+.product-detail-description-content-sp .sp-lienquan .product-info-price{
+    font-size: 15px;
+}
+.product-detail-description-content-sp .sp-lienquan h1{
+    font-size: 25px;
+}
+.product-detail-description-content-sp .sp-lienquan img{
+    width: 50%;
+}
+
+.product-detail-description-content h2 {
+    margin: 100px 0 50px 0;
+    text-align: center;
+}
 
 .product-detail-description-content.active {
     height: max-content;
@@ -1171,119 +1196,106 @@ footer ul li {
     }
 }
 
-
-
-
 /* navvvvvvvvvvvv */
 
-nav.vertical{
-    position:relative;
-    background:transparent;
-  }
-  
-  /* ALL UL */
-  nav.vertical ul{
-    list-style: none;
-  }
-  /* ALL LI */
-  nav.vertical li{
-    position:relative;
-  }
-  /* ALL A */
-  nav.vertical a{
-    display:block;
-    color:rgb(0, 0, 0);
-    text-decoration:none;
-    padding:10px 15px;
-    transition:0.2s;
-  }
-  /* ALL A HOVER */
-  nav.vertical li:hover > a{
-    background:transparent;
-  }
-  
-  /* INNER UL HIDE */
-  nav.vertical ul ul{
-    background:rgba(0,0,0,0.1);
-    padding-left:20px;
-    transition: max-height 0.2s ease-out;
-    max-height:0;
-    overflow:hidden;
-  }
-  /* INNER UL SHOW */
-  nav.vertical li:hover > ul{
-    max-height:500px;
-    transition: max-height 0.25s ease-in;
-  }
+nav.vertical {
+    position: relative;
+    background: transparent;
+}
 
+/* ALL UL */
+nav.vertical ul {
+    list-style: none;
+}
+/* ALL LI */
+nav.vertical li {
+    position: relative;
+}
+/* ALL A */
+nav.vertical a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: 0.2s;
+}
+/* ALL A HOVER */
+nav.vertical li:hover > a {
+    background: transparent;
+}
+
+/* INNER UL HIDE */
+nav.vertical ul ul {
+    background: rgba(0, 0, 0, 0.1);
+    padding-left: 20px;
+    transition: max-height 0.2s ease-out;
+    max-height: 0;
+    overflow: hidden;
+}
+/* INNER UL SHOW */
+nav.vertical li:hover > ul {
+    max-height: 500px;
+    transition: max-height 0.25s ease-in;
+}
 
 /* customs inputs number */
-.quantity {
-    position: relative;
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
   }
   
   input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button
-  {
+  input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
-    margin: 0;
   }
   
-  input[type=number]
-  {
-    -moz-appearance: textfield;
+  .number-input {
+    border: 2px solid #ddd;
+    display: inline-flex;
   }
   
-  .quantity input {
-    width: 45px;
-    height: 42px;
-    line-height: 1.65;
-    float: left;
-    display: block;
-    padding: 0;
-    margin: 0;
-    padding-left: 20px;
-    border: 1px solid #eee;
+  .number-input,
+  .number-input * {
+    box-sizing: border-box;
   }
   
-  .quantity input:focus {
-    outline: 0;
-  }
-  
-  .quantity-nav {
-    float: left;
-    position: relative;
-    height: 42px;
-  }
-  
-  .quantity-button {
-    position: relative;
+  .number-input button {
+    outline:none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
     cursor: pointer;
-    border-left: 1px solid #eee;
-    width: 20px;
+    margin: 0;
+    position: relative;
+  }
+  
+  .number-input button:after {
+    display: inline-block;
+    position: absolute;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    content: '\f077';
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  .number-input button.plus:after {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  
+  .number-input input[type=number] {
+    font-family: sans-serif;
+    max-width: 5rem;
+    padding: .5rem;
+    border: solid #ddd;
+    border-width: 0 2px;
+    font-size: 2rem;
+    height: 3rem;
+    font-weight: bold;
     text-align: center;
-    color: #333;
-    font-size: 13px;
-    font-family: "Trebuchet MS", Helvetica, sans-serif !important;
-    line-height: 1.7;
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
   }
-  
-  .quantity-button.quantity-up {
-    position: absolute;
-    height: 50%;
-    top: 0;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .quantity-button.quantity-down {
-    position: absolute;
-    bottom: -1px;
-    height: 50%;
-  }
+
+/* input number custom */

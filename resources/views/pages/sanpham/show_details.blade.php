@@ -26,17 +26,7 @@
                     <img src="{{URL::to('public/uploads/product/'.$value->product_image)}}" alt="">
                 </div>
                 <div class="box">
-                    <div class="product-img-list">
-                        <div class="product-img-item">
-                            <img src="{{URL::to('public/frontend/images/kisspng-beats-electronics-headphones-apple-beats-studio-red-headphones.png')}}" alt="">
-                        </div>
-                        <div class="product-img-item">
-                            <img src="{{URL::to('public/frontend/images/JBL-Endurance-Sprint_Alt_Red-1605x1605px.webp')}}" alt="">
-                        </div>
-                        <div class="product-img-item">
-                            <img src="{{URL::to('public/frontend/images/JBL_Quantum_400_Product Image_Hero 02.png')}} " alt="">
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
 
@@ -54,35 +44,23 @@
                         <span class="product-info-detail-title">Danh Mục:</span>
                         <a href="#">{{$value->category_name}}</a>
                     </div>
+                    <form action="">
+                        <p class="product-description">
+                            Mô tả sản phẩm: {!!$value->product_desc!!}       
+                        </p>
+                        <div class="product-info-price">{{number_format($value->product_price).' VND'}}</div>
+                        <div class="product-quantity-wrapper">
 
-                    {{-- <div class="product-info-detail">
-                        <span class="product-info-detail-title">Rated:</span>
-                        <span class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </span>
-                    </div> --}}
-                    <p class="product-description">
-                        Mô tả sản phẩm: {!!$value->product_desc!!}       
-                    </p>
-                    <div class="product-info-price">{{number_format($value->product_price).' VND'}}</div>
-                    <div class="product-quantity-wrapper">
-                        {{-- <span class="product-quantity-btn">
-                            <i class='bx bx-minus'></i>
-                        </span>
-                        <span class="product-quantity">1</span>
-                        <span class="product-quantity-btn">
-                            <i class='bx bx-plus'></i>
-                        </span> --}}
+                            
+                            <div class="number-input">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                            </div>  
+                            
 
-                        <div class="quantity">
-                            <input type="number" min="1" max="20" step="1" value="1">
                         </div>
-                        
-                    </div>
+                    </form>
                     <div>
                         <button class="btn-flat btn-hover">add to cart</button>
                     </div>
@@ -101,130 +79,44 @@
                 Nội Dung Chi Tiết Sản Phẩm
             </div>
             <div class="product-detail-description">
-                <button class="btn-flat btn-hover btn-view-description" id="view-all-description">
-                    view all
-                </button>
                 <div class="product-detail-description-content">
                     <p>
                         {!!$value->product_content!!}   
                     </p>
-                    <img src="./images/JBL_Quantum_400_Product Image_Hero 02.png" alt="">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis accusantium officia, quae fuga in exercitationem aliquam labore ex doloribus repellendus beatae facilis ipsam. Veritatis vero obcaecati iste atque aspernatur ducimus.
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat quam praesentium id sit amet magnam ad, dolorum, cumque iste optio itaque expedita eius similique, ab adipisci dicta. Quod, quibusdam quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, in corrupti ipsam sint error possimus commodi incidunt suscipit sit voluptatum quibusdam enim eligendi animi deserunt recusandae earum natus voluptas blanditiis?
-                    </p>
-                    <img src="./images/kisspng-beats-electronics-headphones-apple-beats-studio-red-headphones.png" alt="">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ullam quam fugit veniam ipsum recusandae incidunt, ex ratione, magnam labore ad tenetur officia! In, totam. Molestias sapiente deserunt animi porro?
-                    </p>
+                    <br>
+                    <h2>Sản Phẩm Liên Quan</h2>
+                    <div class="product-detail-description-content-sp">
+                        @foreach($ralate as $key => $lienquan)
+                        
+                        <div class="sp-lienquan">
+                            <img src="{{URL::to('public/uploads/product/'.$lienquan->product_image)}}" alt="">
+                            <h1>
+                                {{$lienquan->product_name}}
+                            </h1>
+                            <div class="product-info-price">{{number_format($lienquan->product_price).' VND'}}</div>
+                            <div class="product-info-detail">
+                                <h3>Danh Mục</h3>
+                                <a href="#">{{$lienquan->category_name}}</a>
+                            </div>
+                            <button class="btn-flat btn-hover">add to cart</button>
+                        </div>
+                        
+                        @endforeach
+                    </div>
+     
                 </div>
             </div>
         </div>
+
+
+
+        
         <div class="box">
             <div class="box-header">
-                review
+                reviewww
             </div>
             <div>
-                <div class="user-rate">
-                    <div class="user-info">
-                        <div class="user-avt">
-                            <img src="./images/tuat.jpg" alt="">
-                        </div>
-                        <div class="user-name">
-                            <span class="name">tuat tran anh</span>
-                            <span class="rating">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="user-rate-content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ea iste, veritatis nobis amet illum, cum alias magni dolores odio, eius quo excepturi veniam ipsa voluptatibus natus voluptas vero? Aspernatur!
-                    </div>
-                </div>
-                <div class="user-rate">
-                    <div class="user-info">
-                        <div class="user-avt">
-                            <img src="./images/tuat.jpg" alt="">
-                        </div>
-                        <div class="user-name">
-                            <span class="name">tuat tran anh</span>
-                            <span class="rating">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="user-rate-content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ea iste, veritatis nobis amet illum, cum alias magni dolores odio, eius quo excepturi veniam ipsa voluptatibus natus voluptas vero? Aspernatur!
-                    </div>
-                </div>
-                <div class="user-rate">
-                    <div class="user-info">
-                        <div class="user-avt">
-                            <img src="./images/tuat.jpg" alt="">
-                        </div>
-                        <div class="user-name">
-                            <span class="name">tuat tran anh</span>
-                            <span class="rating">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="user-rate-content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ea iste, veritatis nobis amet illum, cum alias magni dolores odio, eius quo excepturi veniam ipsa voluptatibus natus voluptas vero? Aspernatur!
-                    </div>
-                </div>
-                <div class="user-rate">
-                    <div class="user-info">
-                        <div class="user-avt">
-                            <img src="./images/tuat.jpg" alt="">
-                        </div>
-                        <div class="user-name">
-                            <span class="name">tuat tran anh</span>
-                            <span class="rating">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="user-rate-content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ea iste, veritatis nobis amet illum, cum alias magni dolores odio, eius quo excepturi veniam ipsa voluptatibus natus voluptas vero? Aspernatur!
-                    </div>
-                </div>
-                <div class="user-rate">
-                    <div class="user-info">
-                        <div class="user-avt">
-                            <img src="./images/tuat.jpg" alt="">
-                        </div>
-                        <div class="user-name">
-                            <span class="name">tuat tran anh</span>
-                            <span class="rating">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="user-rate-content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ea iste, veritatis nobis amet illum, cum alias magni dolores odio, eius quo excepturi veniam ipsa voluptatibus natus voluptas vero? Aspernatur!
-                    </div>
-                </div>
+                
                 <div class="box">
                     <ul class="pagination">
                         <li><a href="#"><i class='bx bxs-chevron-left'></i></a></li>

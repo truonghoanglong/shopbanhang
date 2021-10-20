@@ -138,30 +138,32 @@
         <div class="row" id="latest-products">
             @foreach($all_product as $key => $product)
             <div class="col-3 col-md-6 col-sm-12">
-                <div class="product-card">
-                    <div class="product-card-img">
-                        <img src="{{('public/uploads/product/'.$product->product_image)}}" alt="">
-                        <img src="{{('public/uploads/product/'.$product->product_image)}}" alt="">
+                <a href="{{URL::to('/chi-tiet-san-pham/'.$product->product_id)}}">
+                    <div class="product-card">
+                        <div class="product-card-img">
+                            <img src="{{('public/uploads/product/'.$product->product_image)}}" alt="">
+                            <img src="{{('public/uploads/product/'.$product->product_image)}}" alt="">
+                        </div>
+                        <div class="product-card-info">
+                            <div class="product-btn">
+                                <button class="btn-flat btn-hover btn-shop-now">shop now</button>
+                                <button class="btn-flat btn-hover btn-cart-add">
+                                    <i class='bx bxs-cart-add'></i>
+                                </button>
+                                <button class="btn-flat btn-hover btn-cart-add">
+                                    <i class='bx bxs-heart'></i>
+                                </button>
+                            </div>
+                            <div class="product-card-name">
+                                {{$product->product_name}}
+                            </div>
+                            <div class="product-card-price">
+                                <span><del>{{number_format($product->product_price).'VND'}}</del></span>
+                                <span class="curr-price">{{number_format($product->product_price).' VND'}}</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="product-card-info">
-                        <div class="product-btn">
-                            <button class="btn-flat btn-hover btn-shop-now">shop now</button>
-                            <button class="btn-flat btn-hover btn-cart-add">
-                                <i class='bx bxs-cart-add'></i>
-                            </button>
-                            <button class="btn-flat btn-hover btn-cart-add">
-                                <i class='bx bxs-heart'></i>
-                            </button>
-                        </div>
-                        <div class="product-card-name">
-                            {{$product->product_name}}
-                        </div>
-                        <div class="product-card-price">
-                            <span><del>{{number_format($product->product_price).'VND'}}</del></span>
-                            <span class="curr-price">{{number_format($product->product_price).' VND'}}</span>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
             @endforeach
         </div>
