@@ -24,7 +24,7 @@
     <header>
         <!-- mobile menu -->
         <div class="mobile-menu bg-second">
-            <a href="#" class="mb-logo">LONG</a>
+            <a href="{{URL::to('/')}}" class="mb-logo">LONG</a>
             <span class="mb-menu-toggle" id="mb-menu-toggle">
                 <i class='bx bx-menu'></i>
             </span>
@@ -74,7 +74,7 @@
             <!-- mid header -->
             <div class="bg-main">
                 <div class="mid-header container">
-                    <a href="#" class="logo">LONG</a>
+                    <a href="{{URL::to('/')}}" class="logo">LONG</a>
                     <div class="search">
                         <input type="text" placeholder="Search">
                         <i class='bx bx-search-alt'></i>
@@ -82,7 +82,7 @@
                     <ul class="user-menu">
                         <li><a href="#"><i class='bx bx-bell'></i></a></li>
                         <li><a href="#"><i class='bx bx-user-circle'></i></a></li>
-                        <li><a href="#"><i class='bx bx-cart'></i></a></li>
+                        <li><a href="{{URL::to('show-cart')}}"><i class='bx bx-cart'></i></a></li>
                     </ul>
                 </div>
             </div>
