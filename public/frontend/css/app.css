@@ -1274,16 +1274,18 @@ input[type="number"] {
     position: relative;
   }
   
+  .number-input button:before,
   .number-input button:after {
     display: inline-block;
     position: absolute;
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 900;
-    content: '\f077';
-    transform: translate(-50%, -50%) rotate(180deg);
+    content: '';
+    width: 1rem;
+    height: 2px;
+    background-color: #212121;
+    transform: translate(-50%, -50%);
   }
   .number-input button.plus:after {
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(90deg);
   }
   
   .number-input input[type=number] {
@@ -1297,5 +1299,4 @@ input[type="number"] {
     font-weight: bold;
     text-align: center;
   }
-
 /* input number custom */

@@ -44,26 +44,32 @@
                         <span class="product-info-detail-title">Danh Mục:</span>
                         <a href="#">{{$value->category_name}}</a>
                     </div>
-                    <form action="">
+                    <form action="{{URL::to('/save-cart')}}" method="POST">
+                        {{csrf_field()}}
                         <p class="product-description">
                             Mô tả sản phẩm: {!!$value->product_desc!!}       
                         </p>
+
                         <div class="product-info-price">{{number_format($value->product_price).' VND'}}</div>
                         <div class="product-quantity-wrapper">
 
                             
                             <div class="number-input">
-                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-                                <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                                <input name="qty" class="quantity" min="0" value="1" type="number">
+                                <input name="productid_hidden" class="quantity" min="0" value="{{$value->product_id}}" type="hidden">
                                 <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                            </div>  
+                            </div>
                             
+                           
 
                         </div>
+                        <div style="margin-top: 20px">
+                            <button type="submit" class="btn-flat btn-hover">add to cart</button>
+                        </div>
                     </form>
-                    <div>
-                        <button class="btn-flat btn-hover">add to cart</button>
-                    </div>
+                    
+                    
                 </div>
             </div>
 

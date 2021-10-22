@@ -22,7 +22,7 @@ Route::get('/trang-chu','HomeController@index');
 // ----------------Danh mục sản phẩm trang chủ---------------------------
 Route::get('/danh-muc-san-pham/{category_id}','CategoryProduct@show_category_home');
 Route::get('/thuong-hieu-san-pham/{brand_id}','BrandProduct@show_brand_home');
-Route::get('/chi-tiet-san-pham/{product_id}','ProductController@details_product');
+Route::post('/chi-tiet-san-pham/{product_id}','ProductController@details_product');
 
 
 
@@ -72,4 +72,8 @@ Route::get('/active-product/{product_id}','ProductController@active_product');
 
 Route::post('/save-product','ProductController@save_product');
 Route::post('/update-product/{product_id}','ProductController@update_product');
+
+
+//cart 
+Route::post('//save-cart','CartController@save_cart');
 
