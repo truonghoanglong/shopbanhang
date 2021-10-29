@@ -81,7 +81,7 @@
                     </div>
                     <ul class="user-menu">
                         <li><a href="#"><i class='bx bx-bell'></i></a></li>
-                        <li><a href="#"><i class='bx bx-user-circle'></i></a></li>
+                        <li><a href="{{URL::to('/login-checkout')}}"><i class='bx bx-user-circle'></i></a></li>
                         <li><a href="{{URL::to('show-cart')}}"><i class='bx bx-cart'></i></a></li>
                     </ul>
                 </div>

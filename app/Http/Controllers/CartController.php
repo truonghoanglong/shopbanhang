@@ -32,6 +32,7 @@ class CartController extends Controller
         
         Cart::add($data);
         // Cart::destroy();
+        Cart::setGlobalTax(0);
 
         return Redirect::to('/show-cart'); 
 
@@ -39,6 +40,7 @@ class CartController extends Controller
     }
 
     public function show_cart(){
+        Cart::setGlobalTax(0);
         
         $cate_product = DB::table('tbl_category_product')->where('category_status',0)->orderBy('category_id','desc')->get();
         $brand_product = DB::table('tbl_brand')->where('brand_status',0)->orderBy('brand_id','desc')->get();

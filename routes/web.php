@@ -80,3 +80,6 @@ Route::get('/show-cart','CartController@show_cart');
 Route::get('/delete-to-cart/{rowId}','CartController@delete_to_card');
 Route::post('/update-cart-quantity','CartController@update_cart_quantity');
 
+
+//checkout
+Route::get('/login-checkout','CheckoutController@login_checkout');
