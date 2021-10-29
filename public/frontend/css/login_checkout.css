@@ -5,6 +5,10 @@
     height: 80vh;
     background-color:rgb(223, 223, 223);
 }  
+input#user,
+input#new-user{
+  font-size: 15px;
+}
 .box {
     position: relative;
     display: -webkit-box;
