@@ -8,13 +8,13 @@
 <div class="row">
   <div class="col-75">
     <div class="container">
-      <form action="/action_page.php">
+      <form action="{{URL::to('/save-checkout-customer')}}" method="POST">
       
         <div class="row">
           <div class="col-50">
             <h3>Điền thông tin gửi hàng</h3>
 
-            <form action="{{URL::to('/save-checkout-customer')}}" method="POST">
+            
                 {{csrf_field()}}
                 <label for="fname"><i class="fa fa-envelope"></i> Email</label>
                 <input type="text" id="fname" name="shipping_email" placeholder="@gmail.com">
@@ -27,10 +27,15 @@
                 
                 <label for="city"><i class="fa fa-phone"></i> Phone</label>
                 <input type="text" id="city" name="shipping_phone" placeholder="0961">
-            </form>
 
-           
+                <label for="city"><i class="fas fa-comment-dots"></i> Ghi chú đơn hàng</label>
+                <textarea id="w3review" name="shipping_notes" placeholder="..." rows="4" cols="48"></textarea>
+
+                
+                
           </div>
+
+          
 
           <div class="col-50">
             <h3>Payment</h3>

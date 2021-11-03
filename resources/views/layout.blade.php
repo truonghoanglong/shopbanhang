@@ -51,26 +51,45 @@
                         </li>
                     </ul>
                     <ul class="devided">
-                        <li class="dropdown">
-                            <a href="">USD</a>
-                            <i class='bx bxs-chevron-down'></i>
-                            <ul class="dropdown-content">
-                                <li><a href="#">VND</a></li>
-                                <li><a href="#">JPY</a></li>
-                                <li><a href="#">EUR</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="">ENGLISH</a>
-                            <i class='bx bxs-chevron-down'></i>
-                            <ul class="dropdown-content">
-                                <li><a href="#">VIETNAMESE</a></li>
-                                <li><a href="#">JAPANESE</a></li>
-                                <li><a href="#">FRENCH</a></li>
-                                <li><a href="#">SPANISH</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">ORDER TRACKING</a></li>
+                        <li><a href="#">Yêu Thích</a></li>
+                        
+                        <?php
+                            $customer_id = Session::get('customer_id');
+                            if($customer_id != NULL) { 
+                        ?>
+                        <li><a href="{{URL::to('checkout')}}">Thanh Toán</a></li>
+
+                        <?php 
+                        }else{
+                        ?>
+                            <li><a href="{{URL::to('/login-checkout')}}">Thanh Toán</a></li>
+
+                        <?php
+                        }
+                        ?>
+                        
+                        
+
+                       
+                        <li><a href="{{URL::to('/show-cart')}}">Giỏ Hàng</a></li>
+
+                        <?php
+                            $customer_id = Session::get('customer_id');
+                            if($customer_id != NULL) { 
+                        ?>
+                        <li><a href="{{URL::to('/logout-checkout')}}">Đăng Xuất</a></li>
+                        <?php 
+                        }else{
+                        ?>
+                            <li><a href="{{URL::to('/login-checkout')}}">Đăng Nhập</a></li>
+
+                        <?php
+                        }
+                        ?>
+
+                       
+
+                        
                     </ul>
                 </div>
             </div>
