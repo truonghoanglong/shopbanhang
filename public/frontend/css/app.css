@@ -1300,3 +1300,17 @@ input[type="number"] {
     text-align: center;
   }
 /* input number custom */
+
+
+/* search */
+#search{ background:rgb(224, 224, 224); 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    width:100px !important; 
+    height:30px !important;
+    position: absolute;
+    left: 493px;
+    top: 5px;
+    }

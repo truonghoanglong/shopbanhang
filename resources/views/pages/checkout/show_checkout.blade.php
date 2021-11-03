@@ -31,7 +31,7 @@
                 <label for="city"><i class="fas fa-comment-dots"></i> Ghi chú đơn hàng</label>
                 <textarea id="w3review" name="shipping_notes" placeholder="..." rows="4" cols="48"></textarea>
 
-                
+                <input type="submit" name="send-order" value="Gửi" class="btn">
                 
           </div>
 
@@ -70,7 +70,7 @@
           <input type="checkbox" checked="checked" name="send"> Shipping address same as billing
         </label>
 
-        <input type="submit" name="send-order" value="Gửi" class="btn">
+        
 
       </form>
     </div>

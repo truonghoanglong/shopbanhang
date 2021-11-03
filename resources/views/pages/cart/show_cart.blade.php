@@ -8,6 +8,7 @@
 @extends('layout')
 @section('content')
 
+
 <section id="cart_items">
     <div class="container">
         <div class="breadcrumbs">
@@ -19,9 +20,6 @@
         <div class="table-responsive cart_info">
             <?php
             $content = Cart::content();
-            // echo '<pre>';
-            // print_r($content);
-            // echo '</pre>'; 
             ?>
             <table class="table table-condensed">
                 <thead>

@@ -42,12 +42,13 @@
 				<p class="form__text">Already have an account? <label for="toggle" class="form__link">Sign in!</label>
 			</form>
 
-			<form class="form form--login" action="">
+			<form class="form form--login" action="{{URL::to('/login-customer')}}" method="POST">
+				{{csrf_field()}}
 				<h1 class="form__title">Đăng Nhập</h1>
 
 				<div class="form__helper">
 					<input type="text" name="email_account" id="user" placeholder="User" class="form__input" />
-					<label class="form__label" for="user">User</label>
+					<label class="form__label" for="user">Email</label>
 				</div>
 
 				<div class="form__helper">

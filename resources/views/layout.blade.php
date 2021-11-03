@@ -23,7 +23,10 @@
 </head>
 
 <body>
-
+    <?php
+         Session::get('customer_id');
+         Session::get('shipping_id');
+    ?>
     <!-- header -->
     <header>
         <!-- mobile menu -->
@@ -54,18 +57,22 @@
                         <li><a href="#">Yêu Thích</a></li>
                         
                         <?php
-                            $customer_id = Session::get('customer_id');
-                            if($customer_id != NULL) { 
-                        ?>
-                        <li><a href="{{URL::to('checkout')}}">Thanh Toán</a></li>
-
-                        <?php 
-                        }else{
-                        ?>
-                            <li><a href="{{URL::to('/login-checkout')}}">Thanh Toán</a></li>
-
-                        <?php
-                        }
+                                   $customer_id = Session::get('customer_id');
+                                   $shipping_id = Session::get('shipping_id');
+                                   if($customer_id!=NULL && $shipping_id==NULL){ 
+                                 ?>
+                                  <li><a href="{{URL::to('/checkout')}}"><i class=""></i> Thanh toán</a></li>
+                                
+                                <?php
+                                 }elseif($customer_id!=NULL && $shipping_id!=NULL){
+                                 ?>
+                                 <li><a href="{{URL::to('/payment')}}"><i class=""></i> Thanh toán</a></li>
+                                 <?php 
+                                }else{
+                                ?>
+                                 <li><a href="{{URL::to('/login-checkout')}}"><i class=""></i> Thanh toán</a></li>
+                                <?php
+                                 }
                         ?>
                         
                         
@@ -98,10 +105,14 @@
             <div class="bg-main">
                 <div class="mid-header container">
                     <a href="{{URL::to('/')}}" class="logo">LONG</a>
-                    <div class="search">
-                        <input type="text" placeholder="Search">
-                        <i class='bx bx-search-alt'></i>
-                    </div>
+                    <form action="{{URL::to('tim-kiem')}}" method="POST">
+                        {{csrf_field()}}
+                        <div class="search">
+                            <input type="text" placeholder="Tìm kiếm sản phẩm" name="keywords_submit">
+                            
+                            <input id="search" type="submit" value="Search"/>
+                        </div>
+                    </form>
                     <ul class="user-menu">
                         <li><a href="#"><i class='bx bx-bell'></i></a></li>
                         <li><a href="{{URL::to('/login-checkout')}}"><i class='bx bx-user-circle'></i></a></li>

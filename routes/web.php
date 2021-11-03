@@ -15,8 +15,9 @@
 //  -------------------FRONT-END--------------------------------
 
 Route::get('/', 'HomeController@index');
-Route::get('/product-show', 'HomeController@product_show');
+Route::get('/product-show', 'HomeController@product_show'); //viell_all
 Route::get('/trang-chu','HomeController@index');
+Route::post('/tim-kiem','HomeController@search');
 
 
 // ----------------Danh mục sản phẩm trang chủ---------------------------
@@ -34,7 +35,7 @@ Route::get('/dashboard','AdminController@show_dashboard');
 Route::post('/admin-dashboard','AdminController@dashboard');
 Route::get('/logout','AdminController@logout');
 
-//Category product Danh Muc
+//-----------------Category product Danh Muc------
 Route::get('/add-category-product','CategoryProduct@add_category_product');
 Route::get('/edit-category-product/{category_product_id}','CategoryProduct@edit_category_product');
 Route::get('/delete-category-product/{category_product_id}','CategoryProduct@delete_category_product');
@@ -47,7 +48,7 @@ Route::post('/save-category-product','CategoryProduct@save_category_product');
 Route::post('/update-category-product/{category_product_id}','CategoryProduct@update_category_product');
 
 
-//Brand product Thuong Hieu
+//----------------Brand product Thuong Hieu-------
 Route::get('/add-brand-product','BrandProduct@add_brand_product');
 Route::get('/edit-brand-product/{brand_product_id}','BrandProduct@edit_brand_product');
 Route::get('/delete-brand-product/{brand_product_id}','BrandProduct@delete_brand_product');
@@ -61,7 +62,7 @@ Route::post('/update-brand-product/{brand_product_id}','BrandProduct@update_bran
 
 
 
-//product
+//----------product-------
 Route::get('/add-product','ProductController@add_product');
 Route::get('/edit-product/{product_id}','ProductController@edit_product');
 Route::get('/delete-product/{product_id}','ProductController@delete_product');
@@ -74,18 +75,20 @@ Route::post('/save-product','ProductController@save_product');
 Route::post('/update-product/{product_id}','ProductController@update_product');
 
 
-//cart 
+//-----------cart --------
 Route::post('/save-cart','CartController@save_cart');
 Route::get('/show-cart','CartController@show_cart');
 Route::get('/delete-to-cart/{rowId}','CartController@delete_to_card');
 Route::post('/update-cart-quantity','CartController@update_cart_quantity');
 
 
-//checkout
+//---------------checkout-----------------
 Route::get('/login-checkout','CheckoutController@login_checkout');
 Route::get('/logout-checkout','CheckoutController@logout_checkout');
 
 Route::post('/add-customer','CheckoutController@add_customer');
 Route::get('/checkout','CheckoutController@checkout');
 Route::post('/save-checkout-customer','CheckoutController@save_checkout_customer');
+Route::post('/login-customer','CheckoutController@login_customer');
+Route::get('/payment','CheckoutController@payment');
 
