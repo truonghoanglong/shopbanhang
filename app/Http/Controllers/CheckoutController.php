@@ -77,7 +77,51 @@ class CheckoutController extends Controller
         }else{
             return Redirect::to('/login-checkout');
         }
+    }
+
+    public function order_place(Request $request){
+        //inset payment_method
+        $data= array();
+        $data['payment_method'] = $request -> payment_option;
+        $data['payment_status'] = 'Đang chờ xử lý';
+        $payment_id = DB::table('tbl_payment')->insertGetId($data);
+
+        //inset order
+        $order_data= array();
+        $order_data['customer_id'] = Session::get('customer_id');
+        $order_data['shipping_id'] = Session::get('shipping_id');
+        $order_data['payment_id'] =  $payment_id ;
+        $order_data['order_total'] = Cart::total();
+        $order_data['order_status'] = 'Đang chờ xử lý';
+        $order_id = DB::table('tbl_order')->insertGetId($order_data);
+
+        //inset order_details
+        $content = Cart::content();
+        foreach($content as $v_content) {
+            $order_data= array();
+            $order_d_data['order_id'] = $order_id;
+            $order_d_data['product_id'] =  $v_content->id;
+            $order_d_data['product_name'] = $v_content->name ;
+            $order_d_data['product_price'] = $v_content->price;
+            $order_d_data['product_sales_quanlity'] = $v_content->qty;
+            DB::table('tbl_order_details')->insert($order_d_data);
+        }
+        if($data['payment_method']==1){
+
+            echo 'Thanh toán thẻ ATM';
         
-      
+          }elseif($data['payment_method']==2){
+              echo 'Tien mat';
+            // Cart::destroy();
+            // $cate_product = DB::table('tbl_category_product')->where('category_status','0')->orderby('category_id','desc')->get();
+            // $brand_product = DB::table('tbl_brand')->where('brand_status','0')->orderby('brand_id','desc')->get(); 
+            // return view('pages.checkout.handcash')->with('category',$cate_product)->with('brand',$brand_product)->with('meta_desc',$meta_desc)->with('meta_keywords',$meta_keywords)->with('meta_title',$meta_title)->with('url_canonical',$url_canonical);
+          }else{
+            echo 'Thẻ ghi nợ';
+        
+          }
+        //return Redirect::to('/payment');
+
+       
     }
 }

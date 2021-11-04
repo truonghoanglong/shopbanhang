@@ -37,3 +37,14 @@ h4{
 .payment-option span{
     margin-left: 20px;
 }
+.sub{
+    padding: 10px;
+    background-color: rgb(76, 190, 76);
+    border-radius: 5px;
+    width: 150px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 20px;
+}

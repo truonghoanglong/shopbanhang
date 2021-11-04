@@ -73,14 +73,15 @@
             {{csrf_field()}}
             <div class="payment-option">
                 <span>
-                    <label for=""><input type="checkbox" value='bằng ATM'>Trả bằng ATM</label>
+                    <label for=""><input type="checkbox" name="payment_option" value='1'>Trả bằng ATM</label>
                 </span>
                 <span>
-                    <label for=""><input type="checkbox" value='bằng tiền mặt'>Trả bằng tiền mặt</label>
+                    <label for=""><input type="checkbox" name="payment_option" value='2'>Trả bằng tiền mặt</label>
                 </span>
                 <span>
-                    <label for=""><input type="checkbox" value='thẻ ghi nợ'>Trả qua thẻ ghi nợ</label>
-                </span>
+                    <label for=""><input type="checkbox" name="payment_option" value='3'>Trả qua thẻ ghi nợ</label>
+                </span> 
+                <input type="submit" name="send-order-place" value="Đặt Hàng" class="sub">
             </div>
          </form>
       
