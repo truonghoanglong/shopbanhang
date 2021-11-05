@@ -23,10 +23,6 @@
 </head>
 
 <body>
-    <?php
-         Session::get('customer_id');
-         Session::get('shipping_id');
-    ?>
     <!-- header -->
     <header>
         <!-- mobile menu -->
