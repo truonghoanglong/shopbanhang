@@ -63,10 +63,28 @@
                 <a href="#" class="active">
                     <i class='bx bx-home'></i>
                     <span>dashboard</span>
+                </a>         
+            </li>
+
+
+            {{-- don-hang --}}
+            <li class="sidebar-submenu">
+                <a href="{{URL::to('dashboard')}}" class="sidebar-menu-dropdown">
+                    <i class='bx bx-shopping-bag'></i>
+                    <span>Đơn Hàng</span>
+                    <div class="dropdown-icon"></div>
                 </a>
-                
-            {{-- </li>
-            <li>
+                <ul class="sidebar-menu sidebar-menu-dropdown-content">
+                    <li>
+                        <a href="{{URL::to('manage-order')}}">
+                           Quảng Lý Đơn Hàng
+                        </a>
+                    </li>
+                   
+                    
+                </ul>
+            </li>
+            {{-- <li>
                 <a href="#">
                     <i class='bx bx-shopping-bag'></i>
                     <span>sales</span>

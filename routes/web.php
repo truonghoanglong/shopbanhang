@@ -93,3 +93,8 @@ Route::post('/login-customer','CheckoutController@login_customer');
 Route::post('/order-place','CheckoutController@order_place');
 Route::get('/payment','CheckoutController@payment');
 
+//order-quanlydonhang
+Route::get('/manage-order','CheckoutController@manage_order');
+Route::get('/view-order/{orderId}','CheckoutController@view_order');
+
+
