@@ -1,5 +1,3 @@
-
-
 @extends('layout')
 @section('content')
 <link href="{{asset('public/frontend/css/payment.css')}}" rel="stylesheet">

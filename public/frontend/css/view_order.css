@@ -1,0 +1,29 @@
+.sidebar {
+    display: none;
+}
+td.td3 {
+    margin-left: auto;
+    width: 20 px;
+    padding-left: 235 px;
+}
+th,td{
+    text-align: center;
+}
+#tren {
+    background-color: #e0e1e1;
+    width: 70% !important;
+    text-align: center;
+    padding: 35px;
+}
+.td3{
+    width: 50px;
+}
+.td33{
+    width: 50px;
+}
+#duoi{
+    text-align: center;
+}
+thead tr{
+    background-color: #e0e1e1;
+}

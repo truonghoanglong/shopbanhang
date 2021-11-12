@@ -38,28 +38,25 @@
           <thead>
             <tr>
               <th style="width:20px;">
-                <label class="i-checks m-b-none">
-                  <input type="checkbox"><i></i>
-                </label>
               </th>
               <th>Tên Người Đặt Hàng</th>
               <th>Tổng Giá Tiền</th>
               <th>TÌnh Trạng Đơn Hàng</th>
-              <th>Hiển Thị</th>
+              <th>Hiển Thị Chi Tiết</th>
               <th style="width:30px;"></th>
             </tr>
           </thead>
           <tbody>
             @foreach($all_order as $key => $order)
             <tr>
-              <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+              <td><label class="i-checks m-b-none"><input type="hidden" name="post[]"><i></i></label></td>
               <td>{{$order -> customer_name}}</td>
               <td>{{$order -> order_total}}</td>
               <td>{{$order -> order_status}}</td>
 
               <td>
-                <a href="{{URL::to('/view-order/'.$order->order_id)}}" class="active edit" ><i class='bx bxs-copy-alt'></i></a>
-                <a onclick="return confirm('Bạn có chắc muốn xóa đơn hàng không')" href="{{URL::to('/delete-order/'.$order->order_id)}}" class="delete"><i class='bx bx-x' ></i></a>
+                <a href="{{URL::to('/view-order/'.$order->order_id)}}" class="active edit" ><i style="margin-left:60px" class='bx bxs-copy-alt'></i></a>
+                {{-- <a onclick="return confirm('Bạn có chắc muốn xóa đơn hàng không')" href="{{URL::to('/delete-order/'.$order->order_id)}}" class="delete"><i class='bx bx-x' ></i></a> --}}
               </td>
             @endforeach
           </tbody>

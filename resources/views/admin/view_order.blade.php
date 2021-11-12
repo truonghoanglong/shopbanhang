@@ -1,5 +1,8 @@
 @extends('admin_layout')
 @section('admin_content')
+
+<link href="{{asset('public/frontend/css/view_order.css')}}" rel="stylesheet">
+
 <div class="table-agile-info">
     <div class="">
       <div class="panel-heading">
@@ -19,7 +22,7 @@
             <tr>
               
               <th>Tên Người Mua</th>
-              <th>Địa Chỉ</th>
+              <th>Số Điện Thoại</th>
               
               <th style="width:30px;"></th>
             </tr>
@@ -55,13 +58,7 @@
      
     </div>
     <div class="table-responsive">
-      <?php 
-      $message = Session::get('message');
-      if($message){
-          echo $message;
-          Session::put('message',null);
-      }
-      ?> 
+     
       <table class="table table-striped b-t b-light">
         <thead>
           <tr>
@@ -105,25 +102,21 @@
         ?> 
         <table class="table table-striped b-t b-light">
           <thead>
-            <tr>
-            
-              <th>Tên Sản Phẩm</th>
-              <th>Số Lượng</th>
-              <th>Giá</th>
-              <th>Tổng Tiền</th>
-             
-              
-            
+            <tr id="tren">
+              <th class="td3 td33" >Tên Sản Phẩm</th>
+              <th class="td3" >Số Lượng</th>
+              <th class="td3" >Giá</th>
+              <th class="td3" >Tổng Tiền</th>
             </tr>
           </thead>
           <tbody>
             
-            <tr>
+            <tr id="duoi">
              
-              <td>{{$order_by_id->product_name}}</td>
-              <td>{{$order_by_id->product_sales_quanlity}}</td>
-              <td>{{$order_by_id->product_price}}</td>
-              <td>{{$order_by_id->order_total}}</td>
+              <td class="td3 td33">{{$order_by_id->product_name}}</td>
+              <td class="td3">{{$order_by_id->product_sales_quanlity}}</td>
+              <td class="td3">{{$order_by_id->product_price}}</td>
+              <td class="td3">{{$order_by_id->order_total}}</td>
             </tr>
 
               
@@ -137,6 +130,7 @@
  
    <!-- footer -->
 <br> <br>
+
 
 
 
