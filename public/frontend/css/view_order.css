@@ -1,6 +1,4 @@
-.sidebar {
-    display: none;
-}
+
 td.td3 {
     margin-left: auto;
     width: 20 px;
@@ -26,4 +24,7 @@ th,td{
 }
 thead tr{
     background-color: #e0e1e1;
+}
+#bang{
+    width: 100px;
 }

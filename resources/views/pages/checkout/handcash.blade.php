@@ -7,6 +7,7 @@
 
 <div class="main">
     <div class="container">
+        <br> <br> <br> <br> <br> <br> 
         <h2>Cảm ơn bạn đã đặt hàng ở Website của chúng tôi, chúng tôi sẽ liên hệ với bạn sớm nhất.  </h2>
         
     </div>
