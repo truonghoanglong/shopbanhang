@@ -177,7 +177,7 @@
 <!-- end product list -->
 
   <!-- special product -->
-  <div class="bg-second">
+{{-- <div class="bg-second">
     <div class="section container">
         <div class="row">
             <div class="col-4 col-md-4">
@@ -196,11 +196,11 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- end special product -->
 
 <!-- product list -->
-<div class="section">
+{{-- <div class="section">
     <div class="container">
         <div class="section-header">
             <h2>best selling</h2>
@@ -237,11 +237,11 @@
             <a href="./products.html" class="btn-flat btn-hover">view all</a>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- end product list -->
 
 <!-- blogs -->
-<div class="section">
+{{-- <div class="section">
     <div class="container">
         <div class="section-header">
             <h2>latest blog</h2>
@@ -278,7 +278,7 @@
             <a href="#" class="btn-flat btn-hover">view all</a>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- end blogs -->
 
 @endsection

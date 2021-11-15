@@ -47,7 +47,6 @@ class CheckoutController extends Controller
 
         return view('pages.checkout.show_checkout')->with('category',$cate_product)->with('brand',$brand_product);
     }
-
     public function save_checkout_customer(Request $request){
         $data= array();
         $data['shipping_name'] = $request -> shipping_name;
