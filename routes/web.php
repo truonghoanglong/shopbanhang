@@ -97,4 +97,8 @@ Route::get('/payment','CheckoutController@payment');
 Route::get('/manage-order','CheckoutController@manage_order');
 Route::get('/view-order/{orderId}','CheckoutController@view_order');
 
+//send_mail
+Route::get('/send-mail','MaillController@send_mail');
+
+
 

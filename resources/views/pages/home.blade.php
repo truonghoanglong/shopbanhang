@@ -158,7 +158,6 @@
                                 {{$product->product_name}}
                             </div>
                             <div class="product-card-price">
-                                <span><del>{{number_format($product->product_price).'VND'}}</del></span>
                                 <span class="curr-price">{{number_format($product->product_price).' VND'}}</span>
                             </div>
                         </div>
