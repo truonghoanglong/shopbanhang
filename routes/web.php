@@ -93,12 +93,15 @@ Route::post('/login-customer','CheckoutController@login_customer');
 Route::post('/order-place','CheckoutController@order_place');
 Route::get('/payment','CheckoutController@payment');
 
+//send_mail
+Route::get('/send-mail','MaillController@send_mail');
+
 //order-quanlydonhang
 Route::get('/manage-order','CheckoutController@manage_order');
 Route::get('/view-order/{orderId}','CheckoutController@view_order');
+// Route::get('/manage-order','OrderController@manage_order');
 
-//send_mail
-Route::get('/send-mail','MaillController@send_mail');
+
 
 
 

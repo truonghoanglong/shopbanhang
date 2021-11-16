@@ -64,7 +64,6 @@
       </div>
       
     </div>
-  </div>
-  </section>
-   <!-- footer -->
+</div>
 @endsection 
+

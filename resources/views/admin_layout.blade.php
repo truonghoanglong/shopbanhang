@@ -76,7 +76,7 @@
                 </a>
                 <ul class="sidebar-menu sidebar-menu-dropdown-content">
                     <li>
-                        <a href="{{URL::to('manage-order')}}">
+                        <a href="{{URL::to('/manage-order')}}">
                            Quảng Lý Đơn Hàng
                         </a>
                     </li>
