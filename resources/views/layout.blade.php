@@ -125,7 +125,7 @@
                         <!-- mega menu -->
                         <li class="mega-dropdown">
                             <a href="./products.html">Shop<i class='bx bxs-chevron-down'></i></a>
-                            <div class="mega-content">
+                            {{-- <div class="mega-content">
                                 <div class="row">
                                     <div class="col-3 col-md-12">
                                         <div class="box">
@@ -194,7 +194,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </li>
                         <!-- end mega menu -->
                         <li><a href="#">blog</a></li>
@@ -207,7 +207,7 @@
         <!-- end main header -->
     </header>
     <!-- end header -->
-
+    
     <!-- hero section -->
     {{-- <div class="hero">
         <div class="slider">
@@ -304,7 +304,7 @@
 
     
 
-  
+        <div style="margin: 0 0 100px 700px " class="fb-share-button" data-href="http://localhost:8080/shopbanhang/" data-layout="button" data-size="large"><a target="_blank" href="http://localhost:8080/shopbanhang/&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia sẻ</a></div>
 
     <!-- footer -->
     <footer class="bg-second">
@@ -375,6 +375,8 @@
     
     <script src="{{asset('public/frontend/js/app.js')}}"></script>
     <script src="{{asset('public/frontend/js/index.js')}}"></script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0" nonce="nQlhlWRY"></script>
 </body>
 
 </html>
