@@ -20,6 +20,7 @@
                             <textarea name="categry_product_desc" cols="55" rows="7">{{$edit_value->category_desc}}</textarea>
                             {{-- <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> --}}
                         </div>
+
                         
                         
                         

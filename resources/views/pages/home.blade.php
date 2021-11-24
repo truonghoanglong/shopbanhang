@@ -1,39 +1,6 @@
 @extends('layout')
 @section('content')
 
-<!-- promotion section -->
-<div class="promotion">
-    {{-- <div class="row">
-        <div class="col-4 col-md-12 col-sm-12">
-            <div class="promotion-box">
-                <div class="text">
-                    <h3>Headphone & Earbuds</h3>
-                    <button class="btn-flat btn-hover"><span>shop collection</span></button>
-                </div>
-                <img src="{{('public/frontend/images/JBLHorizon_001_dvHAMaster.png')}}" alt="">
-            </div>
-        </div>
-        <div class="col-4 col-md-12 col-sm-12">
-            <div class="promotion-box">
-                <div class="text">
-                    <h3>JBL Quantum Series</h3>
-                    <button class="btn-flat btn-hover"><span>shop collection</span></button>
-                </div>
-                <img src="{{('public/frontend/images/kisspng-beats-electronics-headphones-apple-beats-studio-red-headphones.png')}}" alt="">
-            </div>
-        </div>
-        <div class="col-4 col-md-12 col-sm-12">
-            <div class="promotion-box">
-                <div class="text">
-                    <h3>True Wireless Earbuds</h3>
-                    <button class="btn-flat btn-hover"><span>shop collection</span></button>
-                </div>
-                <img src="{{('public/frontend/images/JBL_TUNE220TWS_ProductImage_Pink_ChargingCaseOpen.png')}}" alt="">
-            </div>
-        </div>
-    </div> --}}
-</div>
-<!-- end promotion section -->
 
 <div class="hero">
     <div class="slider">
@@ -43,13 +10,13 @@
                 <div class="info">
                     <div class="info-content">
                         <h3 class="top-down">
-                            JBL TUNE 750TNC
+                            Đồng Hồ Thông Minh
                         </h3>
                         <h2 class="top-down trans-delay-0-2">
-                            Next-gen design
+                            Apple Seri
                         </h2>
                         <p class="top-down trans-delay-0-4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolor commodi dignissimos culpa, eaque eos necessitatibus possimus veniam, cupiditate rerum deleniti? Libero, ducimus error? Beatae velit dolore sint explicabo! Fugit.
+                            Apple Watch Series 7, Apple Watch SE, and Apple Watch Series 3 have a water resistance rating of 50 meters under ISO standard 22810:2010. This means that they may be used for shallow-water activities like swimming in a pool or ocean. However, they should not be used for scuba diving, waterskiing.
                         </p>
                         <div class="top-down trans-delay-0-6">
                             <button class="btn-flat btn-hover">
@@ -59,7 +26,7 @@
                     </div>
                 </div>
                 <div class="img top-down">
-                    <img src="{{asset('public/frontend/images/JBL_E55BT_KEY_RED_6063_FS_x1-1605x1605px.webp')}}" alt="">
+                    <img src="{{asset('public/frontend/images/intro1.png')}}" alt="">
                 </div>
             </div>
             <!-- end slide item -->
@@ -68,7 +35,7 @@
                 <div class="info">
                     <div class="info-content">
                         <h3 class="top-down">
-                            JBL Quantum ONE
+                            Đồng Hồ Điện Tử 
                         </h3>
                         <h2 class="top-down trans-delay-0-2">
                             Ipsum dolor
@@ -84,7 +51,7 @@
                     </div>
                 </div>
                 <div class="img right-left">
-                    <img src="{{asset('public/frontend/images/JBL_E55BT_KEY_BLACK_6175_FS_x1-1605x1605px.png')}}" alt="">
+                    <img src="{{asset('public/frontend/images/intro2.png')}}" alt="">
                 </div>
             </div>
             <!-- end slide item -->
@@ -93,7 +60,7 @@
                 <div class="info">
                     <div class="info-content">
                         <h3 class="top-down">
-                            JBL JR 310BT
+                            Đồng Hồ Cơ
                         </h3>
                         <h2 class="top-down trans-delay-0-2">
                             Consectetur Elit
@@ -109,7 +76,7 @@
                     </div>
                 </div>
                 <div class="img left-right">
-                    <img src="{{asset('public/frontend/images/JBL_JR 310BT_Product Image_Hero_Skyblue.png')}}" alt="">
+                    <img src="{{asset('public/frontend/images/intro33.png')}}" alt="">
                 </div>
             </div>
             <!-- end slide item -->

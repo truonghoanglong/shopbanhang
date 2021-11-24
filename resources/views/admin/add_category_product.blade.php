@@ -15,11 +15,14 @@
                             <label for="exampleInputEmail1">Tên Danh Mục</label>
                             <input type="text" class="form-control" name="categry_product_name" placeholder="Danh Mục Sản Phẩm">
                         </div>
+
                         <div class="form-group">
                             <label for="exampleInputPassword1">Mô Tả Danh Mục</label>
                             <textarea name="categry_product_desc" cols="55" rows="7"placeholder="Mô Tả Danh Mục"></textarea>
                             {{-- <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> --}}
                         </div>
+
+                        
                         
                         <div class="form-group">
                             <label>Hiển Thị</label>
