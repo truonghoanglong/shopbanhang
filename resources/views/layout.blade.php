@@ -122,81 +122,9 @@
             <div class="bg-second">
                 <div class="bottom-header container">
                     <ul class="main-menu">
-                        <li><a href="{{URL::to('trang-chu')}}">home</a></li>
+                        <li><a href="{{URL::to('/')}}">home</a></li>
                         <!-- mega menu -->
-                        <li class="mega-dropdown">
-                            <a href="./products.html">Shop<i class='bx bxs-chevron-down'></i></a>
-                            {{-- <div class="mega-content">
-                                <div class="row">
-                                    <div class="col-3 col-md-12">
-                                        <div class="box">
-                                            <h3>Categories</h3>
-                                            <ul>
-                                                <li><a href="#">Wireless</a></li>
-                                                <li><a href="#">Inear headphone</a></li>
-                                                <li><a href="#">Overear headphone</a></li>
-                                                <li><a href="#">sport headphone</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-3 col-md-12">
-                                        <div class="box">
-                                            <h3>Categories</h3>
-                                            <ul>
-                                                <li><a href="#">Wireless</a></li>
-                                                <li><a href="#">Inear headphone</a></li>
-                                                <li><a href="#">Overear headphone</a></li>
-                                                <li><a href="#">sport headphone</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-3 col-md-12">
-                                        <div class="box">
-                                            <h3>Categories</h3>
-                                            <ul>
-                                                <li><a href="#">Wireless</a></li>
-                                                <li><a href="#">Inear headphone</a></li>
-                                                <li><a href="#">Overear headphone</a></li>
-                                                <li><a href="#">sport headphone</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-3 col-md-12">
-                                        <div class="box">
-                                            <h3>Categories</h3>
-                                            <ul>
-                                                <li><a href="#">Wireless</a></li>
-                                                <li><a href="#">Inear headphone</a></li>
-                                                <li><a href="#">Overear headphone</a></li>
-                                                <li><a href="#">sport headphone</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row img-row">
-                                    <div class="col-3">
-                                        <div class="box">
-                                            <img src="{{('public/frontend/images/kisspng-beats-electronics-headphones-apple-beats-studio-red-headphones.png')}}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="box">
-                                            <img src="./images/JBL_TUNE220TWS_ProductImage_Pink_ChargingCaseOpen.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="box">
-                                            <img src="./images/JBL_JR 310BT_Product Image_Hero_Skyblue.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="box">
-                                            <img src="./images/JBLHorizon_001_dvHAMaster.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> --}}
-                        </li>
+                        <li class="mega-dropdown"><a href="{{URL::to('/product-show')}}">Shop</a></li>
                         <!-- end mega menu -->
                         <li><a href="#">blog</a></li>
                         <li><a href="#">contact</a></li>

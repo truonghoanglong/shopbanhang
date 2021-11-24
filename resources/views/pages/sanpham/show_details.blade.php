@@ -101,8 +101,8 @@
                             </h1>
                             <div class="product-info-price">{{number_format($lienquan->product_price).' VND'}}</div>
                             <div class="product-info-detail">
-                                <h3>Danh Mục</h3>
-                                <a href="#">{{$lienquan->category_name}}</a>
+                                {{-- <h3>Danh Mục</h3>
+                                <a href="#">{{$lienquan->category_name}}</a> --}}
                             </div>
                             <button class="btn-flat btn-hover">add to cart</button>
                         </div>
@@ -123,28 +123,28 @@
             </div>
             <div>
                 
-                <div class="box">
-                    <ul class="pagination">
-                        <li><a href="#"><i class='bx bxs-chevron-left'></i></a></li>
-                        <li><a href="#" class="active">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#"><i class='bx bxs-chevron-right'></i></a></li>
-                    </ul>
-                </div>
+                    {{-- <div class="box">
+                        <ul class="pagination">
+                            <li><a href="#"><i class='bx bxs-chevron-left'></i></a></li>
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#"><i class='bx bxs-chevron-right'></i></a></li>
+                        </ul>
+                    </div> --}}
             </div>
         </div>
 
 
         @endforeach
-        <div class="box">
+        {{-- <div class="box">
             <div class="box-header">
                 related products
             </div>
             <div class="row" id="related-products"></div>
-        </div>
+        </div> --}}
     </div>
 </div>
 
