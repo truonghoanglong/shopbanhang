@@ -121,8 +121,9 @@
             <div class="box-header">
                 reviewww
             </div>
+            
             <div>
-                
+                <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="" data-numposts="5"></div>
                     {{-- <div class="box">
                         <ul class="pagination">
                             <li><a href="#"><i class='bx bxs-chevron-left'></i></a></li>
