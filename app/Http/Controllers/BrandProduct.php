@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use DB;
+use App\Brand;
 use App\Http\Requests;
 use Session;
 use Illuminate\Support\Facades\Redirect;
@@ -31,19 +32,33 @@ class BrandProduct extends Controller
     public function all_brand_product(){
         $this->AuthLogin();
 
-        $all_brand_product = DB::table('tbl_brand')->get();
+        // $all_brand_product = DB::table('tbl_brand')->get();
+
+        $all_brand_product = Brand::all();
+
         $manager_brand_product = view('admin.all_brand_product')->with('all_brand_product', $all_brand_product);
         return view('admin_layout')->with('admin.all_brand_product',$manager_brand_product);
     }
     public function save_brand_product(Request $request){
         $this->AuthLogin();
 
-        $data = array();
-        $data['brand_name'] = $request->brand_product_name;
-        $data['brand_desc'] = $request->brand_product_desc;
-        $data['brand_status'] = $request->brand_product_status;
+        // $data = array();
+        // $data['brand_name'] = $request->brand_product_name;
+        // $data['brand_desc'] = $request->brand_product_desc;
+        // $data['brand_status'] = $request->brand_product_status;
+        // DB::table('tbl_brand')->insert($data);
+        //KHONG SU DỤNG MODEL
 
-        DB::table('tbl_brand')->insert($data);
+        //SU DỤNG MODEL
+
+        $data = $request->all();
+        $brand = new Brand();
+        $brand->brand_name = $data['brand_product_name'];
+        $brand->brand_desc = $data['brand_product_desc'];
+        $brand->brand_status = $data['brand_product_status'];
+        $brand->save();
+
+
         Session::put('message','Thêm thương hiệu sản phẩm thành công');
         return redirect::to('add-brand-product');
     }
@@ -68,6 +83,9 @@ class BrandProduct extends Controller
         $this->AuthLogin();
 
         $edit_brand_product = DB::table('tbl_brand')->where('brand_id',$brand_product_id)->get();
+
+        // $edit_brand_product = Brand::find($brand_product_id);
+
         $manager_brand_product = view('admin.edit_brand_product')->with('edit_brand_product', $edit_brand_product);
         return view('admin_layout')->with('admin.edit_brand_product',$manager_brand_product);
     }
