@@ -12,7 +12,7 @@
 		<div class="check-shadow"></div>     
 	</div>
     <h2>Cảm ơn quý khách hàng đã mua sản phẩm tại LONG shop</h2>
-    <a class="tranchu" href="{{URL::to('/')}}">Trang Chủ</a>
+    <a class="tranchu" href="{{URL::to('/send-mail')}}">Trang Chủ</a>
 </div>
 
 @endsection
