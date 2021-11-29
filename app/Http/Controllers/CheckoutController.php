@@ -130,7 +130,7 @@ class CheckoutController extends Controller
             echo 'Thẻ ghi nợ';
         
           }
-        //return Redirect::to('/payment');
+        // return Redirect::to('/payment');
     }
 
     //quanlydonhang

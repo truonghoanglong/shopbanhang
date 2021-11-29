@@ -81,7 +81,7 @@
                 <span>
                     <label for=""><input type="checkbox" name="payment_option" value='3'>Trả qua thẻ ghi nợ</label>
                 </span> 
-                <input type="submit" name="send-order-place" value="Đặt Hàng" class="sub">
+                <input style="margin-bottom:100px" type="submit" name="send-order-place" value="Đặt Hàng" class="sub">
             </div>
          </form>
       

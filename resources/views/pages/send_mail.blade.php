@@ -9,5 +9,6 @@
 <body>
     <h1>Mail được gửi từ: {{$name}}</h1>
     <h4>Với nội dung: {{$body}}</h4>
+    <p>Trân trọng</p>
 </body>
 </html>
