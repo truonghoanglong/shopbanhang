@@ -102,6 +102,10 @@ Route::get('/view-order/{orderId}','CheckoutController@view_order');
 // Route::get('/manage-order','OrderController@manage_order');
 
 
+//contact
+
+
+
 
 
 
