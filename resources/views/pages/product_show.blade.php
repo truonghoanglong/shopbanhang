@@ -295,21 +295,30 @@
                     <div class="row" id="latest-products">
                         @foreach($all_product as $key => $product)
                         <div class="col-3 col-md-6 col-sm-12">
-                            <a href="{{URL::to('/chi-tiet-san-pham/'.$product->product_id)}}">
+                            
                                 <div class="product-card">
+                                    <a href="{{URL::to('/chi-tiet-san-pham/'.$product->product_id)}}">
                                     <div class="product-card-img">
+                                       
                                         <img src="{{('public/uploads/product/'.$product->product_image)}}" alt="">
                                         <img src="{{('public/uploads/product/'.$product->product_image)}}" alt="">
                                     </div>
+                                    
                                     <div class="product-card-info">
                                         <div class="product-btn">
                                             <button class="btn-flat btn-hover btn-shop-now">shop now</button>
-                                            <button class="btn-flat btn-hover btn-cart-add">
+                                            {{-- <button class="btn-flat btn-hover btn-cart-add">
+                                                <i class='bx bxs-cart-add'></i>
+                                            </button> --}}
+                                        </a>
+                                            <button type="button" class="btn-flat btn-hover btn-cart-add" name="add-to-card">
                                                 <i class='bx bxs-cart-add'></i>
                                             </button>
-                                            <button class="btn-flat btn-hover btn-cart-add">
+
+                                            {{-- <button class="btn-flat btn-hover btn-cart-add">
                                                 <i class='bx bxs-heart'></i>
-                                            </button>
+                                            </button> --}}
+
                                         </div>
                                         <div class="product-card-name">
                                             {{$product->product_name}}
@@ -319,7 +328,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                           
                         </div>
                         @endforeach
                     </div>

@@ -103,6 +103,10 @@ Route::get('/view-order/{orderId}','CheckoutController@view_order');
 
 
 //contact
+Route::get('/contact','ContactController@contact');
+
+//blogs
+
 
 
 

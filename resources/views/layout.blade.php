@@ -19,6 +19,7 @@
     <!-- app css -->
     <link rel="stylesheet" href="{{asset('public/frontend/css/grid.css')}}">
     <link rel="stylesheet" href="{{asset('public/frontend/css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/css/sweetalert.css')}}">
 
 
 </head>
@@ -124,10 +125,10 @@
                     <ul class="main-menu">
                         <li><a href="{{URL::to('/')}}">home</a></li>
                         <!-- mega menu -->
-                        <li class="mega-dropdown"><a href="{{URL::to('/product-show')}}">Shop</a></li>
+                        <li><a href="{{URL::to('/product-show')}}">Shop</a></li>
                         <!-- end mega menu -->
-                        <li><a href="#">blog</a></li>
-                        <li><a href="#">contact</a></li>
+                        <li><a href="{{URL::to('/contact')}}">blog</a></li>
+                        <li><a href="{{URL::to('/contact')}}">contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -300,14 +301,27 @@
     <!-- end footer -->
 
     <!-- app js -->
-    
-    
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
+    <script src="{{asset('public/frontend/js/jquery.js')}}"></script>
     <script src="{{asset('public/frontend/js/app.js')}}"></script>
     <script src="{{asset('public/frontend/js/index.js')}}"></script>
+
+    <script src="{{asset('public/frontend/js/sweetalert.js')}}"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.btn-cart-add').click(function(){
+                swal("Hello world!");
+            })
+        });
+    </script>
+
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0" nonce="VH63mylo"></script>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0" nonce="i6zJ9oSU"></script>
+
+    
 </body>
 
 </html>
