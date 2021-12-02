@@ -107,6 +107,15 @@
             <div class="col-3 col-md-6 col-sm-12">
                 <a href="{{URL::to('/chi-tiet-san-pham/'.$product->product_id)}}">
                     <div class="product-card">
+                        {{-- <form>
+                            {{csrf_field()}}
+                        <input type="hidden" value="{{$product->product_id}}" class="card_product_id_{{$product->product_id}}">
+                        <input type="hidden" value="{{$product->product_name}}" class="card_product_name_{{$product->product_id}}">
+                        <input type="hidden" value="{{$product->product_image}}" class="card_product_image_{{$product->product_id}}">
+                        <input type="hidden" value="{{$product->product_price}}" class="card_product_price_{{$product->product_id}}">
+                        <input type="hidden" value="1" class="card_product_qty_{{$product->product_id}}"> --}}
+
+                        
                         <div class="product-card-img">
                             <img src="{{('public/uploads/product/'.$product->product_image)}}" alt="">
                             <img src="{{('public/uploads/product/'.$product->product_image)}}" alt="">
@@ -114,12 +123,15 @@
                         <div class="product-card-info">
                             <div class="product-btn">
                                 <button class="btn-flat btn-hover btn-shop-now">shop now</button>
-                                <button class="btn-flat btn-hover btn-cart-add">
+                            
+                                {{-- <button class="btn-flat btn-hover btn-cart-add">
+                                    <i class='bx bxs-cart-add'></i>
+                                </button> --}}
+                            
+
+                                <button type="button" class="btn-flat btn-hover btn-cart-add" data-id={{$product->product_id}} name="add-to-card">
                                     <i class='bx bxs-cart-add'></i>
                                 </button>
-                                {{-- <button class="btn-flat btn-hover btn-cart-add">
-                                    <i class='bx bxs-heart'></i>
-                                </button> --}}
                             </div>
                             <div class="product-card-name">
                                 {{$product->product_name}}
@@ -128,6 +140,9 @@
                                 <span class="curr-price">{{number_format($product->product_price).' VND'}}</span>
                             </div>
                         </div>
+                        
+
+                         {{-- </form> --}}
                     </div>
                 </a>
             </div>

@@ -308,13 +308,27 @@
 
     <script src="{{asset('public/frontend/js/sweetalert.js')}}"></script>
     
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         $(document).ready(function(){
             $('.btn-cart-add').click(function(){
-                swal("Hello world!");
+                var id=$(this).data('id');
+                //var cart_product_id = $('.cart_product_id_'+ id).val();
+                var cart_product_name = $('.card_product_name_' + id).val();
+                var cart_product_image = $('.card_product_image_' + id).val();
+                var cart_product_price = $('.card_product_price_' + id).val();
+                var cart_product_qty = $('.card_product_qty_' + id).val();
+                var _token = $('input[name="_token"]').val();
+                $.ajax({
+                    url: '{{url('/add-cart-ajax')}}',
+                    method: 'POST',
+                    data:{cart_product_name:cart_product_name,cart_product_image:cart_product_image,cart_product_price:cart_product_price,cart_product_qty:cart_product_qty,_token:_token},
+                    success:function(data){
+                        alert(data);
+                    }
+                });
             })
         });
-    </script>
+    </script> --}}
 
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0" nonce="VH63mylo"></script>

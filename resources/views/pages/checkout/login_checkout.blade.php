@@ -42,7 +42,7 @@
 				<p class="form__text">Already have an account? <label for="toggle" class="form__link">Sign in!</label>
 			</form>
 
-			<form class="form form--login" action="{{URL::to('/login-customer')}}" method="POST">
+			<form class="form form--login" action="{{URL::to('/')}}" method="POST"> //login-customer
 				{{csrf_field()}}
 				<h1 class="form__title">Đăng Nhập</h1>
 
