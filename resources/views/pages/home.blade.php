@@ -262,5 +262,49 @@
     </div>
 </div> --}}
 <!-- end blogs -->
+<!-- blogs -->
+<div class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>clock</h2>
+      </div>
+      <div class="blog">
+        <div class="blog-img">
+          <img src="{{asset('public/uploads/blog/intro1142.png')}}" alt="" />
+        </div>
+        <div class="blog-info">
+          <div class="blog-title">Lorem ipsum dolor sit amet</div>
+          <div class="blog-preview">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi,
+            eligendi dolore. Sapiente omnis numquam mollitia asperiores animi,
+            veritatis sint illo magnam, voluptatum labore, quam ducimus! Nisi
+            doloremque praesentium laudantium repellat.
+          </div>
+          <button class="btn-flat btn-hover"><a href="{{URL::to('/blog')}}">read more</a></button>
+        </div>
+      </div>
+      <div class="blog row-revere">
+        <div class="blog-img">
+          <img src="{{asset('public/uploads/blog/Apple-Watch-Series-7-400x300242.png')}}" alt="" style="border-radius:15px" />
+        </div>
+        <div class="blog-info">
+          <div class="blog-title">Lorem ipsum dolor sit amet</div>
+          <div class="blog-preview">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi,
+            eligendi dolore. Sapiente omnis numquam mollitia asperiores animi,
+            veritatis sint illo magnam, voluptatum labore, quam ducimus! Nisi
+            doloremque praesentium laudantium repellat.
+          </div>
+          <button class="btn-flat btn-hover"><a href="{{URL::to('/blog')}}">read more</a></button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <!-- end blogs -->
 
+
+    <div style="margin: 0 0 100px 660px" class="fb-like" data-href="http://localhost:8080/shopbanhang/" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
+
+<!-- footer -->
 @endsection
