@@ -143,7 +143,7 @@
             {{-- Sản Phẩm --}}
             <li class="sidebar-submenu">
                 <a href="#" class="sidebar-menu-dropdown">
-                    <i class='bx bx-category'></i>
+                    <i class='bx bx-doughnut-chart'></i>    
                     <span>Sản Phẩm</span>
                     <div class="dropdown-icon"></div>
                 </a>
@@ -161,6 +161,27 @@
                     
                 </ul>
             </li>
+
+            <li class="sidebar-submenu">
+                <a href="#" class="sidebar-menu-dropdown">
+                    <i class='bx bxs-book-content'></i>
+                    <span>Tin tức</span>
+                    <div class="dropdown-icon"></div>
+                </a>
+                <ul class="sidebar-menu sidebar-menu-dropdown-content">
+                    <li>
+                        <a href="{{URL::to('add-blog')}}">
+                            Thêm Tin Tức
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{URL::to('all-blog')}}">
+                            Liệt Kê Tin Tức
+                        </a>
+                    </li>
+                    
+                </ul>
+            {{-- </li>
             <li>
                 <a href="#">
                     <i class='bx bx-mail-send'></i>
@@ -178,7 +199,7 @@
                     <i class='bx bx-calendar'></i>
                     <span>calendar</span>
                 </a>
-            </li>
+            </li> --}}
             <li class="sidebar-submenu">
                 <a href="#" class="sidebar-menu-dropdown">
                     <i class='bx bx-cog'></i>
