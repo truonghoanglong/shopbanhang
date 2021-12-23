@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+  }
+
+.img{
+    border-radius: 10px;
+    height: 170px;
+    background:rgb(179, 125, 125);
+    overflow: hidden;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    
+}
