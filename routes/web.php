@@ -108,6 +108,18 @@ Route::get('/view-order/{orderId}','CheckoutController@view_order');
 Route::get('/contact','ContactController@contact');
 
 //blogs
+Route::get('/blog','BlogController@view_blog');
+Route::get('/add-blog','BlogController@add_blog');
+Route::get('/edit-blog/{blog_id}','BlogController@edit_blog');
+Route::post('/update-blog/{blog_id}','BlogController@update_blog');
+Route::get('/delete-blog/{blog_id}','BlogController@delete_blog');
+Route::get('/all-blog','BlogController@all_blog');
+Route::post('/save-blog','BlogController@save_blog');
+Route::get('/unactive-blog/{blog_id}','BlogController@unactive_blog');
+Route::get('/active-blog/{blog_id}','BlogController@active_blog');
+
+
+
 
 
 
