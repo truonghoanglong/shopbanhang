@@ -4,20 +4,13 @@
 <link href="{{asset('public/frontend/css/view_order.css')}}" rel="stylesheet">
 
 
-<div class="table-agile-info">
+{{-- <div class="table-agile-info">
     <div class="">
       <div class="panel-heading">
-       Thông Tin Người Mua Hàng
+       <h3>Thông Tin Người Mua Hàng</h3>
       </div>
 
       <div class="table-responsive">
-        <?php 
-        $message = Session::get('message');
-        if($message){
-            echo $message;
-            Session::put('message',null);
-        }
-        ?> 
         <table class="table table-striped b-t b-light">
           <thead>
             <tr>
@@ -29,20 +22,18 @@
             </tr>
           </thead>
           <tbody>
-            
-            <tr>
-             
-              <td>{{$order_by_id->customer_name}}</td>
-              <td>{{$order_by_id->customer_phone}}</td>
-
-              
-           
+            @foreach($order_by_id as $v_content)
+            <tr>         
+                <td>{{$v_content->customer_name}}</td>
+                <td>{{$v_content->customer_phone}}</td>
+            </tr>
+            @endforeach
           </tbody>
         </table>
       </div>
       
     </div>
-</div>
+</div> --}}
 
 
 
@@ -51,7 +42,7 @@
 <div class="table-agile-info">
     <div class="">
       <div class="panel-heading">
-       Liệt Kê Chi Tiết Đơn Hàng
+       <h3>Liệt Kê Chi Tiết Đơn Hàng</h3>
       </div>
 
       <div class="table-responsive">
@@ -72,14 +63,16 @@
             </tr>
           </thead>
           <tbody>
-            
+
+            @foreach($order_by_id as $v_content)
             <tr id="duoi">
-             
-              <td class="td3 td33">{{$order_by_id->product_name}}</td>
-              <td class="td3">{{$order_by_id->product_sales_quanlity}}</td>
-              <td class="td3">{{$order_by_id->product_price}}</td>
-              <td class="td3">{{$order_by_id->order_total}}</td>
+              <td class="td3 td33">{{$v_content->product_name}}</td>
+              <td class="td3">{{$v_content->product_sales_quanlity}}</td>
+              <td class="td3">{{$v_content->product_price}}</td>
+              <td class="td3">{{$v_content->order_total}}</td>
             </tr>
+            @endforeach
+
           </tbody>
         </table>
       </div>
@@ -92,7 +85,7 @@
 <div class="table-agile-info">
   <div class="">
     <div class="panel-heading">
-      Thông Tin Vận Chuyển
+      <h3>Thông Tin Vận Chuyển</h3>
     </div>
     <div class="row w3-res-tb">
       
@@ -118,9 +111,9 @@
           
           <tr>
          
-            <td>{{$order_by_id->shipping_name}}</td>
-            <td>{{$order_by_id->shipping_address}}</td>
-            <td>{{$order_by_id->shipping_phone}}</td>
+            <td>{{$v_content->shipping_name}}</td>
+            <td>{{$v_content->shipping_address}}</td>
+            <td>{{$v_content->shipping_phone}}</td>
 
             
         </tbody>

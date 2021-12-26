@@ -53,6 +53,7 @@
               <td>{{$order -> customer_name}}</td>
               <td>{{$order -> order_total}}</td>
               <td>{{$order -> order_status}}</td>
+              
 
               <td>
                 <a href="{{URL::to('/view-order/'.$order->order_id)}}" class="active edit" ><i style="margin-left:60px" class='bx bxs-copy-alt'></i></a>
