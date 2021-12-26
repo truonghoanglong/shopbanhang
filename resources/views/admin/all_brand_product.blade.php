@@ -37,11 +37,7 @@
         <table class="table table-striped b-t b-light">
           <thead>
             <tr>
-              <th style="width:20px;">
-                <label class="i-checks m-b-none">
-                  <input type="checkbox"><i></i>
-                </label>
-              </th>
+              
               <th>Tên Thương Hiệu</th>
               <th>Hiển Thị</th>
               <th>Sửa/Xóa</th>
@@ -51,7 +47,7 @@
           <tbody>
             @foreach($all_brand_product as $key => $brand_pro)
             <tr>
-              <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+              
               <td>{{$brand_pro -> brand_name}}</td>
               <td><span class="text-ellipsis">
                     <?php

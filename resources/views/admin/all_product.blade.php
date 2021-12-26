@@ -37,11 +37,7 @@
         <table class="table table-striped b-t b-light">
           <thead>
             <tr>
-              <th style="width:20px;">
-                <label class="i-checks m-b-none">
-                  <input type="checkbox"><i></i>
-                </label>
-              </th>
+             
               <th>Tên Sản Phẩm</th>
               <th>Giá</th>
               <th>Hình Ảnh Sản Phẩm Sản Phẩm</th>
@@ -56,7 +52,7 @@
           <tbody>
             @foreach($all_product as $key => $pro)
             <tr>
-              <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+         
               <td>{{$pro -> product_name}}</td>
               <td>{{$pro -> product_price}}</td>
               <td><img src="public/uploads/product/{{$pro -> product_image}}" height="100px" width="100px"></td>

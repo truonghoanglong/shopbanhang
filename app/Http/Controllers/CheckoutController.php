@@ -27,6 +27,8 @@ class CheckoutController extends Controller
 
         return view('pages.checkout.login_checkout')->with('category',$cate_product)->with('brand',$brand_product);
     }
+
+    //dang_ky
     public function add_customer(Request $request){
         $data= array();
         $data['customer_name'] = $request -> customer_name;
@@ -41,6 +43,7 @@ class CheckoutController extends Controller
         return Redirect::to('/checkout');
     }
 
+    //thanh_toan
     public function checkout() {
         $cate_product = DB::table('tbl_category_product')->where('category_status',0)->orderBy('category_id','desc')->get();
         $brand_product = DB::table('tbl_brand')->where('brand_status',0)->orderBy('brand_id','desc')->get();
@@ -69,11 +72,14 @@ class CheckoutController extends Controller
         return view('pages.checkout.payment')->with('category',$cate_product)->with('brand',$brand_product);
     }
 
+    //chuyen_thanhtoan
     public function logout_checkout(){
         Session::flush();
         return Redirect::to('/login-checkout');
     }
 
+
+    //dang-nhap
     public function login_customer(Request $request){
         $email = $request->email_account;
         $password = md5($request->password_account);

@@ -50,7 +50,7 @@
                                 <form action="{{URL::to('/update-cart-quantity')}}" method="post">
                                 {{csrf_field()}}
                                 
-                                <input class="cart_quantity_input" type="text" name="cart_quantity" value="{{$v_content->qty}}" >
+                                <input class="cart_quantity_input" style="width:100px; margin-right:10px" type="text" name="cart_quantity" value="{{$v_content->qty}}" >
 
                                 <input type="hidden" value="{{$v_content->rowId}}" name="rowId_cart" class="form-control">
                                 <input type="submit" value="Cập nhật" name="update_qty" class="btn btn-default btn-sm">
@@ -67,7 +67,7 @@
                                 ?>
                             </p>
                         </td>
-                        <td class="cart_delete">
+                        <td class="cart_delete" style="margin-right: 20px">
                             <a class="cart_quantity_delete" href="{{URL::to('delete-to-cart/'.$v_content->rowId)}}"><i class="fa fa-times"></i></a>
                         </td>
                     </tr>
@@ -93,7 +93,7 @@
                 <div class="total_area">
                     <ul>
                         <li>Tổng<span>{{Cart::total(0,',','.').' VND'}}</span></li>
-                        <li>Thuế<span>0</span></li>
+                        {{-- <li>Thuế<span>0</span></li> --}}
                         <li>Phí vận chuyển<span>Free</span></li>
                         <li>Thành tiền <span>{{Cart::total(0,',','.').' VND'}}</span></li>
                     </ul>

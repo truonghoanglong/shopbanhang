@@ -16,7 +16,7 @@ class CartController extends Controller
 {
     public function save_cart(Request $request){
        
-
+        //sp-show-details
         $prodcutId = $request->productid_hidden;
         $quantity = $request->qty;
 

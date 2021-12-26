@@ -45,7 +45,7 @@
 
                     <div class="box">
                         <span class="filter-header">
-                            Product 
+                            Thương hiệu sản phẩm
                         </span>
                        
                         <nav class="vertical">
@@ -56,7 +56,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="box">
+                    {{-- <div class="box">
                         <span class="filter-header">
                             Price
                         </span>
@@ -282,7 +282,7 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>
+                    </div> --}}
                 </div>
 
 
@@ -308,15 +308,15 @@
                                                 <button class="btn-flat btn-hover btn-cart-add">
                                                     <i class='bx bxs-cart-add'></i>
                                                 </button>
-                                                <button class="btn-flat btn-hover btn-cart-add">
+                                                {{-- <button class="btn-flat btn-hover btn-cart-add">
                                                     <i class='bx bxs-heart'></i>
-                                                </button>
+                                                </button> --}}
                                             </div>
                                             <div class="product-card-name">
                                                 {{$product->product_name}}
                                             </div>
                                             <div class="product-card-price">
-                                                <span><del>{{number_format($product->product_price).'VND'}}</del></span>
+                                                
                                                 <span class="curr-price">{{number_format($product->product_price).' VND'}}</span>
                                             </div>
                                         </div>

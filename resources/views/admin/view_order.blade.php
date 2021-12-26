@@ -108,7 +108,7 @@
         <thead>
           <tr>
             
-            <th>Tên Người Vận Chuyển</th>
+            <th>Tên Người Nhận Hàng</th>
             <th>Địa Chỉ</th>
             <th>Số Điên Thoại</th>
             

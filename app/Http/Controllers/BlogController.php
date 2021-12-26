@@ -24,7 +24,7 @@ class BlogController extends Controller
         return view('admin.blog.add_blog');
     }
     public function view_blog(){
-
+       
         // $al_blog = DB::table('tbl_blog')->get();
         // $manager_blog = view('admin.blog.all_blog')->with('all_blog',$al_blog);
         // return view('layout')->with('pages.blog.blog',$manager_blog);
@@ -35,6 +35,8 @@ class BlogController extends Controller
     }
 
     public function all_blog(){
+        $this->AuthLogin();
+
         $all_blog = DB::table('tbl_blog')->get();
         $manager_blog = view('admin.blog.all_blog')->with('all_blog',$all_blog);
         return view('admin_layout')->with('admin.blog.all_blog',$manager_blog);

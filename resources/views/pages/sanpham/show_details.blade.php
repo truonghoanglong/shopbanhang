@@ -6,24 +6,25 @@
 
 <div class="bg-main">
     <div class="container">
+        @foreach($product_details as $key => $value)
         <div class="box">
             <div class="breadcumb">
                 <a href="./index.html">home</a>
                 <span><i class='bx bxs-chevrons-right'></i></span>
-                <a href="./products.html">all products</a>
+                <a href="./products.html">sản phẩm</a>
                 <span><i class='bx bxs-chevrons-right'></i></span>
-                <a href="./product-detail.html">JBL Tune 750TNC</a>
+                <a href="./product-detail.html">{{$value->product_name}}</a>
             </div>
         </div>
 
 
         {{-- sanpham --}}
 
-        @foreach($product_details as $key => $value)
+       
         <div class="row product-row">
             <div class="col-5 col-md-12">
                 <div class="product-img" id="product-img">
-                    <img src="{{URL::to('public/uploads/product/'.$value->product_image)}}" alt="">
+                    <img src="{{URL::to('public/uploads/product/'.$value->product_image)}}"  alt="">
                 </div>
                 <div class="box">
                     
@@ -95,8 +96,8 @@
                         @foreach($ralate as $key => $lienquan)
                         
                         <div class="sp-lienquan">
-                            <img src="{{URL::to('public/uploads/product/'.$lienquan->product_image)}}" alt="">
-                            <h1>
+                            <img src="{{URL::to('public/uploads/product/'.$lienquan->product_image)}}" width="120" height="120" alt="">
+                            <h1 style="text-overflow: ellipsis;  overflow: hidden; white-space: nowrap;  text-overflow: ellipsis; width:280px; ">
                                 {{$lienquan->product_name}}
                             </h1>
                             <div class="product-info-price">{{number_format($lienquan->product_price).' VND'}}</div>

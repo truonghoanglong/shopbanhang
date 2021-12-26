@@ -11,7 +11,7 @@
 	<div class="big-box">
 		<div class="box">
 			<input type="checkbox" id="toggle" class="box__toggle" hidden>
-			<img src="https://www.dropbox.com/s/u1hx11933jjk7j5/unsplash-bike.jpeg?raw=1" alt="Picture by Autumn Studio" class="box__image">
+			<img src="https://images.unsplash.com/photo-1551816230-ef5deaed4a26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="none" class="box__image">
 			<form class="form form--register" action="{{URL::to('/add-customer')}}" method="POST">
 				{{csrf_field()}}
 				<h1 class="form__title">Đăng Ký</h1>
@@ -37,12 +37,13 @@
 				</div>
 
 
-				<button type="submit" class="form__button">Register</button>
+				<button type="submit" class="form__button">Đăng Ký</button>
 
 				<p class="form__text">Already have an account? <label for="toggle" class="form__link">Sign in!</label>
 			</form>
 
-			<form class="form form--login" action="{{URL::to('/')}}" method="POST"> //login-customer
+			{{-- login-customer --}}
+			<form class="form form--login" action="{{URL::to('/login-customer')}}" method="POST"> 
 				{{csrf_field()}}
 				<h1 class="form__title">Đăng Nhập</h1>
 
