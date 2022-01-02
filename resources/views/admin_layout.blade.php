@@ -178,11 +178,12 @@
                         <a href="{{URL::to('all-blog')}}">
                             Liệt Kê Tin Tức
                         </a>
-                    </li>
-                    
+                    </li>  
                 </ul>
-            {{-- </li>
-            <li>
+             </li>
+
+             
+           {{-- <li>
                 <a href="#">
                     <i class='bx bx-mail-send'></i>
                     <span>mail</span>

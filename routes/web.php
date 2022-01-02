@@ -127,3 +127,4 @@ Route::get('/active-blog/{blog_id}','BlogController@active_blog');
 
 
 
+
