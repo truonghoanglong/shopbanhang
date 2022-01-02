@@ -16,7 +16,7 @@
           ?>
           <table class="table table-condensed">
               <thead>
-                  <tr class="cart_menu">
+                  <tr class="cart_menu" style="text-align: center">
                       <td class="image">Hình ảnh</td>
                       <td class="description">Mô tả</td>
                       <td class="price">Giá</td>
@@ -27,7 +27,7 @@
               </thead>
               <tbody>
                   @foreach($content as $v_content)
-                  <tr>
+                  <tr style="text-align: center">
                       <td class="cart_product">
                           <a href=""><img src="{{URL::to('public/uploads/product/'.$v_content->options->image)}}" width="50" alt=""></a>
                       </td>
@@ -43,10 +43,10 @@
                               <form action="{{URL::to('/update-cart-quantity')}}" method="post">
                               {{csrf_field()}}
                               
-                              <input class="cart_quantity_input" type="text" name="cart_quantity" value="{{$v_content->qty}}" >
+                              <input style="width: 100px" class="cart_quantity_input" type="text" name="cart_quantity" value="{{$v_content->qty}}" >
   
                               <input type="hidden" value="{{$v_content->rowId}}" name="rowId_cart" class="form-control">
-                              <input type="submit" value="Cập nhật" name="update_qty" class="btn btn-default btn-sm">
+                              <input type="submit" value="Cập nhật" name="update_qty" class="btn btn-default btn-sm" >
   
                               </form>
                           </div>
@@ -60,7 +60,7 @@
                               ?>
                           </p>
                       </td>
-                      <td class="cart_delete">
+                      <td class="cart_delete" >
                           <a class="cart_quantity_delete" href="{{URL::to('delete-to-cart/'.$v_content->rowId)}}"><i class="fa fa-times"></i></a>
                       </td>
                   </tr>
@@ -68,19 +68,19 @@
                  
               </tbody>
           </table>
-          <h4>Chọn hình thức thanh toán</h4>
+          <h4>Hình thức thanh toán</h4>
          <form action="{{URL::to('/order-place')}}" method="post">
             {{csrf_field()}}
             <div class="payment-option">
-                <span>
+                {{-- <span>
                     <label for=""><input type="checkbox" name="payment_option" value='1'>Trả bằng ATM</label>
-                </span>
+                </span> --}}
                 <span>
-                    <label for=""><input type="checkbox" name="payment_option" value='2'>Trả bằng tiền mặt</label>
+                    <label for=""><input type="checkbox" checked name="payment_option" value='2'>Trả bằng tiền mặt</label>
                 </span>
-                <span>
+                {{-- <span>
                     <label for=""><input type="checkbox" name="payment_option" value='3'>Trả qua thẻ ghi nợ</label>
-                </span> 
+                </span>  --}}
                 <input style="margin-bottom:100px" type="submit" name="send-order-place" value="Đặt Hàng" class="sub">
             </div>
          </form>
