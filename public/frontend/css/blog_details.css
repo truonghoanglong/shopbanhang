@@ -30,6 +30,10 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    overflow-x: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -69,10 +73,15 @@ table {
     align-items: center;
 }
 img{
+    border-radius: 10px;
     width: 500px;
     height: 300px;
 }
 
 .content{
     margin: 50px;
+}
+p{
+    line-height: 35px;
+    letter-spacing: 1px;
 }

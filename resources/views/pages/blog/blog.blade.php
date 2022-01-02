@@ -19,9 +19,8 @@
         <div class="col l-8 m-8 c-10 ">
             <div class="content">
                 <h2>{{$blog_pro -> blog_title}}</h2>
-                {{$blog_pro -> blog_content}}
-                <button><a href="{{URL::to('/blog-details/'.$blog_pro->blog_id)}}">Xem Chi Tiết</a></button>
-                <a href="{{URL::to('/blog-details/'.$blog_pro->blog_id)}}" class="active edit" ><i class='bx bx-pencil'></i></a>
+                {{$blog_pro -> blog_content}} <br>
+                <button><a href="{{URL::to('/blog-details/'.$blog_pro->blog_id)}}" class="active edit" >Xem Chi Tiết...</a></button>
             </div>
         </div>
             

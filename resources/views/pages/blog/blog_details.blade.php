@@ -13,7 +13,7 @@
         
     </div>
     <div class="content">
-        {{$edit_vla->blog_content_desc}}
+        <p>{{$edit_vla->blog_content_desc}}</p>
     </div>
     @endforeach
 </div>
