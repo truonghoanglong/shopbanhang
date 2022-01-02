@@ -58,7 +58,7 @@
             <tr id="tren">
               <th class="td3 td33" >Tên Sản Phẩm</th>
               <th class="td3" >Số Lượng</th>
-              <th class="td3" >Giá</th>
+              <th class="td3" >Giá/Sp</th>
               <th class="td3" >Tổng Tiền</th>
             </tr>
           </thead>

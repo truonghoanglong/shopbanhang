@@ -39,7 +39,7 @@
 
 				<button type="submit" class="form__button">Đăng Ký</button>
 
-				<p class="form__text">Already have an account? <label for="toggle" class="form__link">Sign in!</label>
+				<p class="form__text">Bạn đã có tài khoản ? <label for="toggle" class="form__link">Đăng nhập !</label>
 			</form>
 
 			{{-- login-customer --}}
@@ -59,7 +59,7 @@
 
 				<button type="submit" class="form__button">Đăng Nhập</button>
 
-				<p class="form__text">Don't have an account? <label for="toggle" class="form__link">Sign up!</label>
+				<p class="form__text">Nếu bạn không có tài khoản ? <label for="toggle" class="form__link">Đăng Ký !</label>
 			</form>
 		</div>
 	</div>
