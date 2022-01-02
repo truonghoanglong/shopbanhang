@@ -16,7 +16,7 @@
                             Apple Seri
                         </h2>
                         <p class="top-down trans-delay-0-4">
-                            Apple Watch Series 7, Apple Watch SE, and Apple Watch Series 3 have a water resistance rating of 50 meters under ISO standard 22810:2010. This means that they may be used for shallow-water activities like swimming in a pool or ocean. However, they should not be used for scuba diving, waterskiing.
+                            Trong khi chờ đợi những chiếc Apple Watch thế hệ thứ 7 nhà Apple xuất hiện tại Việt Nam thì mình có dạo qua một vài trang công nghệ nước ngoài xem họ đánh giá sao về chiếc đồng hồ này. Nếu các bạn cũng tò mò như mình thì bài viết này sẽ tổng hợp những đánh giá nhanh của họ nhé.
                         </p>
                         <div class="top-down trans-delay-0-6">
                             <button class="btn-flat btn-hover">
@@ -41,7 +41,7 @@
                             Ipsum dolor
                         </h2>
                         <p class="top-down trans-delay-0-4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. A optio, voluptatum aperiam nobis quis maxime corporis porro alias soluta sunt quae consectetur aliquid blanditiis perspiciatis labore cumque, ullam, quam eligendi!
+                            Có thể gọi Apple Watch SE là phiên bản giá rẻ của Apple Watch Series 6 vì ngoài một vài tính năng bị cắt giảm, gần như những sự khác biệt là không đáng kể. Vậy đây có phải món hời mà Apple mang đến cho người dùng? Hãy cùng theo dõi trong bài viết này nhé!
                         </p>
                         <div class="top-down trans-delay-0-6">
                             <button class="btn-flat btn-hover">
@@ -66,7 +66,7 @@
                             Consectetur Elit
                         </h2>
                         <p class="top-down trans-delay-0-4">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo aut fugiat, libero magnam nemo inventore in tempora beatae officiis temporibus odit deserunt molestiae amet quam, asperiores, iure recusandae nulla labore!
+                            SE vẫn có những tính năng cơ bản liên quan đến sức khỏe như đo nhịp tim và các cảm biến thông thường như khí áp kế, gia tốc kế, phát hiện té ngã hay cảm biến ánh sáng xung quanh,… nên mình sẽ không đề cập đến nữa mà sẽ chỉ tập trung vào những điểm khác biệt so với Series 6.
                         </p>
                         <div class="top-down trans-delay-0-6">
                             <button class="btn-flat btn-hover">
@@ -273,14 +273,11 @@
           <img src="{{asset('public/uploads/blog/intro1142.png')}}" alt="" />
         </div>
         <div class="blog-info">
-          <div class="blog-title">Lorem ipsum dolor sit amet</div>
+          <div class="blog-title">Các dòng đồng hồ seri 6></div>
           <div class="blog-preview">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi,
-            eligendi dolore. Sapiente omnis numquam mollitia asperiores animi,
-            veritatis sint illo magnam, voluptatum labore, quam ducimus! Nisi
-            doloremque praesentium laudantium repellat.
+            Có thể gọi Apple Watch SE là phiên bản giá rẻ của Apple Watch Series 6 vì ngoài một vài tính năng bị cắt giảm, gần như những sự khác biệt là không đáng kể. Vậy đây có phải món hời mà Apple mang đến cho người dùng? Hãy cùng theo dõi trong bài viết này nhé!
           </div>
-          <button class="btn-flat btn-hover"><a href="{{URL::to('/blog')}}">read more</a></button>
+          <button class="btn-flat btn-hover"><a href="{{URL::to('/blog')}}">đọc thêm</a></button>
         </div>
       </div>
       <div class="blog row-revere">
@@ -288,14 +285,11 @@
           <img src="{{asset('public/uploads/blog/Apple-Watch-Series-7-400x300242.png')}}" alt="" style="border-radius:15px" />
         </div>
         <div class="blog-info">
-          <div class="blog-title">Lorem ipsum dolor sit amet</div>
+          <div class="blog-title">Các dòng đồng hồ seri 6</div>
           <div class="blog-preview">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi,
-            eligendi dolore. Sapiente omnis numquam mollitia asperiores animi,
-            veritatis sint illo magnam, voluptatum labore, quam ducimus! Nisi
-            doloremque praesentium laudantium repellat.
+            Apple Watch SE là chiếc đồng hồ đáng đến từng xu vì trải nghiệm nó mang lại. Sở dĩ mình nói như vậy vì máy có độ mượt ngang ngửa với Series 5 và chỉ kém 20% so với Series 6. Trong khi mức giá lại rẻ hơn Series 5 gần 2 triệu và rẻ hơn Series 6 đến 3 triệu. 
           </div>
-          <button class="btn-flat btn-hover"><a href="{{URL::to('/blog')}}">read more</a></button>
+          <button class="btn-flat btn-hover"><a href="{{URL::to('/blog')}}">đọc thêm</a></button>
         </div>
       </div>
       
