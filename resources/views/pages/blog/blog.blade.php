@@ -20,6 +20,8 @@
             <div class="content">
                 <h2>{{$blog_pro -> blog_title}}</h2>
                 {{$blog_pro -> blog_content}}
+                <button><a href="{{URL::to('/blog-details/'.$blog_pro->blog_id)}}">Xem Chi Tiết</a></button>
+                <a href="{{URL::to('/blog-details/'.$blog_pro->blog_id)}}" class="active edit" ><i class='bx bx-pencil'></i></a>
             </div>
         </div>
             

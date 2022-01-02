@@ -21,7 +21,12 @@
                             <textarea name="blog_content" cols="55" rows="7"placeholder="Nội dung....">{{$edit_vla->blog_content}}</textarea>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1"><img src="public/uploads/blog/{{$edit_vla -> blog_image}}" alt=""></label>
+                            <label for="exampleInputPassword1">Nội Dung Chi Tiết Tin Tức</label>
+                            <textarea name="blog_content_desc" cols="55" rows="7"placeholder="Nội dung....">{{$edit_vla->blog_content_desc}}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1"><img src="{{URL::to('public/uploads/blog/'.$edit_vla->blog_image)}}" alt=""></label>
+                            {{-- <img src="{{URL::to('public/uploads/product/'.$pro->product_image)}}" height="100px" width="100px" /> --}}
                             <input type="file" class="form-control" name="blog_image">
                         </div>
                        

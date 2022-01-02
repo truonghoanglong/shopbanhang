@@ -34,6 +34,13 @@ class BlogController extends Controller
         return view('layout')->with('pages.blog.blog',$manager_blog);
     }
 
+    public function blog_details($blog_id){
+        
+        $edit_blog = DB::table('tbl_blog')->where('blog_id',$blog_id)->get();
+        $manager_blog = view('pages.blog.blog_details')->with('edit_blog', $edit_blog);
+        return view('layout')->with('pages.blog_details',$manager_blog);
+    }
+
     public function all_blog(){
         $this->AuthLogin();
 
@@ -48,6 +55,7 @@ class BlogController extends Controller
         $data = array();
         $data['blog_title'] = $request->blog_title;
         $data['blog_content'] = $request->blog_content;
+        $data['blog_content_desc'] = $request->blog_content_desc;
         $data['blog_status'] = $request->blog_status;
 
         $gett_image = $request->file('blog_image');
@@ -83,6 +91,7 @@ class BlogController extends Controller
         $data = array();
         $data['blog_title'] = $request->blog_title;
         $data['blog_content'] = $request->blog_content;
+        $data['blog_content_desc'] = $request->blog_content_desc;
        
 
         $get_image = $request->file('blog_image');

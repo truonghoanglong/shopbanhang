@@ -26,6 +26,7 @@
               <th>Tiêu đề</th>
               <th>Hình ảnh</th>
               <th>Nội dung</th>
+              <th>Nội dung chi tiết</th>
               <th>Hiển Thị</th>
               <th>Sửa/Xóa</th>
               <th style="width:30px;"></th>
@@ -37,6 +38,7 @@
               <td>{{$blog_pro -> blog_title}}</td>
               <td><img src="public/uploads/blog/{{$blog_pro -> blog_image}}" alt="" height="100" width="100"></td>
               <td>{{$blog_pro -> blog_content}}</td>
+              <td>{{$blog_pro -> blog_content_desc}}</td>
              
               <td><span class="text-ellipsis">
                     <?php

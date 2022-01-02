@@ -43,8 +43,8 @@
               <th>Hình Ảnh Sản Phẩm Sản Phẩm</th>
               <th>Danh Mục </th>
               <th>Thương Hiệu<th>
-
-              
+          
+                
               <th>Sửa/Xóa</th>
               <th style="width:30px;"></th>
             </tr>

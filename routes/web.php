@@ -117,6 +117,8 @@ Route::get('/all-blog','BlogController@all_blog');
 Route::post('/save-blog','BlogController@save_blog');
 Route::get('/unactive-blog/{blog_id}','BlogController@unactive_blog');
 Route::get('/active-blog/{blog_id}','BlogController@active_blog');
+Route::get('/blog-details/{blog_id}','BlogController@blog_details');
+
 
 
 

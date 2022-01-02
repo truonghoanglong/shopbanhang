@@ -21,6 +21,10 @@
                             <textarea name="blog_content" cols="55" rows="7"placeholder="Nội dung...."></textarea>
                         </div>
                         <div class="form-group">
+                            <label for="exampleInputPassword1">Nội Dung Tin Tức Chi Tiết</label>
+                            <textarea name="blog_content_desc" cols="55" rows="7"placeholder="Nội dung chi tiết...."></textarea>
+                        </div>
+                        <div class="form-group">
                             <label for="exampleInputEmail1">Hình Ảnh</label>
                             <input type="file" class="form-control" name="blog_image">
                         </div>
