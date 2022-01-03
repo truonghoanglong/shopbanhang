@@ -17,19 +17,19 @@
             
                 {{csrf_field()}}
                 <label for="fname"><i class="fa fa-envelope"></i> Email</label>
-                <input type="text" id="fname" name="shipping_email" placeholder="@gmail.com">
+                <input type="text" required id="fname" name="shipping_email" placeholder="@gmail.com">
 
                 <label for="email"><i class="fa fa-user"></i> Họ Tên Người Nhận Hàng</label>
-                <input type="text" id="email" name="shipping_name" placeholder="Hoàng Long">
+                <input type="text" required id="email" name="shipping_name" placeholder="Hoàng Long">
 
                 <label for="adr"><i class="fa fa-address-card-o"></i> Đại Chỉ</label>
-                <input type="text" id="adr" name="shipping_address" placeholder="20 Bầu Tràm 1">
+                <input type="text" required id="adr" name="shipping_address" placeholder="20 Bầu Tràm 1">
                 
                 <label for="city"><i class="fa fa-phone"></i> Phone</label>
-                <input type="text" id="city" name="shipping_phone" placeholder="09...">
+                <input type="text" required id="city" name="shipping_phone" placeholder="09...">
 
                 <label for="city"><i class="fas fa-comment-dots"></i> Ghi chú đơn hàng</label>
-                <textarea id="w3review" name="shipping_notes" placeholder="..." rows="4" cols="48"></textarea>
+                <textarea id="w3review" required name="shipping_notes" placeholder="..." rows="4" cols="48"></textarea>
 
                 <input type="submit" name="send-order" value="Gửi" class="btn">
                 
