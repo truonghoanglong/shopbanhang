@@ -13,25 +13,25 @@
                         {{csrf_field()}}
                         <div class="form-group">
                             <label for="exampleInputEmail1">Tên Sản Phẩm</label>
-                            <input type="text" class="form-control" name="product_name" placeholder="Tên Sản Phẩm">
+                            <input type="text" required class="form-control" name="product_name" placeholder="Tên Sản Phẩm">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Giá Sản Phẩm</label>
-                            <input type="text" class="form-control" name="product_price" placeholder="Giá Sản Phẩm">
+                            <input type="text" required class="form-control" name="product_price" placeholder="Giá Sản Phẩm">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Hình Ảnh Sản Phẩm</label>
-                            <input type="file" class="form-control" name="product_image">
+                            <input type="file" required class="form-control" name="product_image">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Mô Tả Sản Phẩm</label>
-                            <textarea style="resize:none" name="product_desc" cols="55" rows="7"placeholder="Mô Tả Sản Phẩm"></textarea>
+                            <textarea style="resize:none" required name="product_desc" cols="55" rows="7"placeholder="Mô Tả Sản Phẩm"></textarea>
                             {{-- <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> --}}
                         </div>
 
                         <div class="form-group">
                             <label for="exampleInputPassword1">Nội Dung Sản Phẩm</label>
-                            <textarea style="resize:none" name="product_content" cols="55" rows="7"placeholder="Nội Dung Sản Phẩm"></textarea>
+                            <textarea style="resize:none" required name="product_content" cols="55" rows="7"placeholder="Nội Dung Sản Phẩm"></textarea>
                             {{-- <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> --}}
                         </div>
 

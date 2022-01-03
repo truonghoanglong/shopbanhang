@@ -13,11 +13,11 @@
                         {{csrf_field()}}
                         <div class="form-group">
                             <label for="exampleInputEmail1">Tên Thương Hiệu</label>
-                            <input type="text" class="form-control" name="brand_product_name" placeholder="Danh Mục Sản Phẩm">
+                            <input type="text" required class="form-control" name="brand_product_name" placeholder="Danh Mục Sản Phẩm">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Mô Tả Thương Hiệu</label>
-                            <textarea name="brand_product_desc" cols="55" rows="7"placeholder="Mô Tả Thương Hiệu"></textarea>
+                            <textarea name="brand_product_desc" required cols="55" rows="7"placeholder="Mô Tả Thương Hiệu"></textarea>
                             {{-- <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> --}}
                         </div>
                         

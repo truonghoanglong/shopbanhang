@@ -13,20 +13,20 @@
                         {{csrf_field()}}
                         <div class="form-group">
                             <label for="exampleInputEmail1">Tiều Đề</label>
-                            <input type="text" class="form-control" name="blog_title" placeholder="Tiều Đề ">
+                            <input type="text" required class="form-control" name="blog_title" placeholder="Tiều Đề ">
                         </div>
                         
                         <div class="form-group">
                             <label for="exampleInputPassword1">Nội Dung Tin Tức</label>
-                            <textarea name="blog_content" cols="55" rows="7"placeholder="Nội dung...."></textarea>
+                            <textarea required name="blog_content" cols="55" rows="7"placeholder="Nội dung...."></textarea>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Nội Dung Tin Tức Chi Tiết</label>
-                            <textarea name="blog_content_desc" cols="55" rows="7"placeholder="Nội dung chi tiết...."></textarea>
+                            <textarea required name="blog_content_desc" cols="55" rows="7"placeholder="Nội dung chi tiết...."></textarea>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Hình Ảnh</label>
-                            <input type="file" class="form-control" name="blog_image">
+                            <input type="file" required class="form-control" name="blog_image">
                         </div>
                         <div class="form-group">
                             <label>Hiển Thị</label>
