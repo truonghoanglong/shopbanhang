@@ -19,6 +19,10 @@
     {{-- css-custom --}}
     <link rel="stylesheet" href="{{asset('public/backend/css/add-category.css')}}">
 
+    {{-- validator:: --}}
+    {{-- <link rel="stylesheet" href="{{asset('public/frontend/css/formValidation.min.css')}}"> --}}
+
+    
 
     <!-- APP CSS -->
     <link rel="stylesheet" href="{{asset('public/frontend/css/dashboarh_grid.css')}}">
@@ -540,6 +544,17 @@
     <div class="overlay"></div>
 
     <!-- SCRIPT -->
+
+    {{-- validation --}}
+    {{-- <script src="{{asset('public/frontend/js/jquery.form-validator.min.js')}}"></script>
+    <script type="text/javascript">
+        $.validator({
+
+        });
+    </script> --}}
+
+    
+
     <!-- APEX CHART -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <!-- APP JS -->

@@ -125,7 +125,6 @@ class CheckoutController extends Controller
             echo 'Thanh toán thẻ ATM';
         
           }elseif($data['payment_method']==2){
-            echo 'Tien mat';
             Cart::destroy();
             $cate_product = DB::table('tbl_category_product')->where('category_status',0)->orderBy('category_id','desc')->get();
             $brand_product = DB::table('tbl_brand')->where('brand_status',0)->orderBy('brand_id','desc')->get();
