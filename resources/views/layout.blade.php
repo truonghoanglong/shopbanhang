@@ -148,33 +148,33 @@
         <div class="container">
             <div class="row">
                 <div class="col-3 col-md-6">
-                    <h3 class="footer-head">Products</h3>
+                    <h3 class="footer-head">Sản phẩm</h3>
                     <ul class="menu">
-                        <li><a href="#">Help center</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">product help</a></li>
-                        <li><a href="#">warranty</a></li>
-                        <li><a href="#">order status</a></li>
+                        <li><a href="#">Trung tâm trợ giúp</a></li>
+                        <li><a href="#">Liên hệ với chung tôi</a></li>
+                        <li><a href="#">hỏi đáp sản phẩm</a></li>
+                        <li><a href="#">Bảo hàng</a></li>
+                        <li><a href="#">Dịch vụ khách hàng</a></li>
                     </ul>
                 </div>
                 <div class="col-3 col-md-6">
-                    <h3 class="footer-head">services</h3>
+                    <h3 class="footer-head">Dịch vụ</h3>
                     <ul class="menu">
-                        <li><a href="#">Help center</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">product help</a></li>
-                        <li><a href="#">warranty</a></li>
-                        <li><a href="#">order status</a></li>
+                        <li><a href="#">Trung tâm dịch vụ</a></li>
+                        <li><a href="#">Hỏi đáp dịch vụ</a></li>
+                        <li><a href="#">hổ trợ dịch vụ</a></li>
+                        <li><a href="#">CSKH</a></li>
+                        <li><a href="#">Đặt hàng</a></li>
                     </ul>
                 </div>
                 <div class="col-3 col-md-6">
-                    <h3 class="footer-head">support</h3>
+                    <h3 class="footer-head">Hổ trợ</h3>
                     <ul class="menu">
-                        <li><a href="#">Help center</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">product help</a></li>
-                        <li><a href="#">warranty</a></li>
-                        <li><a href="#">order status</a></li>
+                        <li><a href="#">hổ trợ khách hàng</a></li>
+                        <li><a href="#">CSKH</a></li>
+                        <li><a href="#">Đóng góp ý kiến</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
                     </ul>
                 </div>
                 <div class="col-3 col-md-6 col-sm-12">
@@ -183,7 +183,7 @@
                             LONG
                         </h3>
                         <ul class="contact-socials">
-                            <li><a href="#">
+                            <li><a href="https://www.facebook.com/truonghoanglongabc/">
                                     <i class='bx bxl-facebook-circle'></i>
                                 </a></li>
                             <li><a href="#">
@@ -198,7 +198,7 @@
                         </ul>
                     </div>
                     <div class="subscribe">
-                        <input type="email" placeholder="ENTER YOUR EMAIL">
+                        <input type="email" placeholder="Gửi mail cho chúng tôi">
                         <button>subscribe</button>
                     </div>
                 </div>
