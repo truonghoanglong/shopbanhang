@@ -32,15 +32,15 @@
 .submit {
     cursor: pointer;
     margin-top: 30px;
-    width: 100px;
+    width: 120px;
     height: 40px;
-    background-color: rgb(180, 147, 102);
+    background-color: rgb(43, 207, 71);
     color: #fff !important;
-    border-radius: 15px;
+    border-radius: 5px;
     outline: none;
     border: none;
     transition: 1s;
 }
-.anhien{
+.anhien {
     width: 200px;
 }

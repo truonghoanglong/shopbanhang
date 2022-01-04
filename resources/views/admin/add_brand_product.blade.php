@@ -4,7 +4,7 @@
     <div class="col-lg-12">
             <section class="panel">
                 <header class="panel-heading">
-                    Thêm Thương Hiệu Sản Phẩm
+                    <h3>Thêm Thương Hiệu Sản Phẩm</h3>
                 </header>
                 <div class="panel-body">
                    
