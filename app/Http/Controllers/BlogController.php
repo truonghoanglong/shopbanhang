@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\Blog;
 use App\Brand;
 use App\Http\Requests;
 use Session;

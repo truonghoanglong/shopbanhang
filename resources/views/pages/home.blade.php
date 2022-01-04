@@ -273,7 +273,7 @@
           <img src="{{asset('public/uploads/blog/intro1142.png')}}" alt="" />
         </div>
         <div class="blog-info">
-          <div class="blog-title">Các dòng đồng hồ seri 6></div>
+          <div class="blog-title">Các dòng đồng hồ seri 7</div>
           <div class="blog-preview">
             Có thể gọi Apple Watch SE là phiên bản giá rẻ của Apple Watch Series 6 vì ngoài một vài tính năng bị cắt giảm, gần như những sự khác biệt là không đáng kể. Vậy đây có phải món hời mà Apple mang đến cho người dùng? Hãy cùng theo dõi trong bài viết này nhé!
           </div>
@@ -285,7 +285,7 @@
           <img src="{{asset('public/uploads/blog/Apple-Watch-Series-7-400x300242.png')}}" alt="" style="border-radius:15px" />
         </div>
         <div class="blog-info">
-          <div class="blog-title">Các dòng đồng hồ seri 6</div>
+          <div class="blog-title">Các dòng đồng hồ seri 6 </div>
           <div class="blog-preview">
             Apple Watch SE là chiếc đồng hồ đáng đến từng xu vì trải nghiệm nó mang lại. Sở dĩ mình nói như vậy vì máy có độ mượt ngang ngửa với Series 5 và chỉ kém 20% so với Series 6. Trong khi mức giá lại rẻ hơn Series 5 gần 2 triệu và rẻ hơn Series 6 đến 3 triệu. 
           </div>
