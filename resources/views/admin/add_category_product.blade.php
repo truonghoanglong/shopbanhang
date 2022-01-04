@@ -33,7 +33,7 @@
                             </select>
                         </div>
                         
-                        <button type="submit" class="submit">Thêm Danh Mục</button> <br> <br> <br> <br> 
+                        <button style="width:150px; background:rgb(79,146,255)" type="submit" class="submit">Thêm Danh Mục</button> <br> <br> <br> <br> 
                         <?php 
                             $message = Session::get('message');
                             if($message){
