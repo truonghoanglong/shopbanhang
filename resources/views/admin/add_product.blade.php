@@ -5,7 +5,7 @@
     <div class="col-lg-12">
             <section class="panel">
                 <header class="panel-heading">
-                    <h3>Thêm Sản Phẩm</h3>
+                    <h3 style="color:rgb(79,146,255)">Thêm Sản Phẩm</h3>
                 </header>
                 <div class="panel-body">
                    
@@ -13,31 +13,31 @@
                     <form role="form" action="{{URL::to('/save-product')}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Tên Sản Phẩm</label>
+                            <label for="exampleInputEmail1"><h4>Tên Sản Phẩm</h4></label>
                             <input type="text" required class="form-control" name="product_name" placeholder="Tên Sản Phẩm">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Giá Sản Phẩm</label>
+                            <label for="exampleInputEmail1"><h4>Giá Sản Phẩm</h4></label>
                             <input type="text" required class="form-control" name="product_price" placeholder="Giá Sản Phẩm">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Hình Ảnh Sản Phẩm</label>
+                            <label for="exampleInputEmail1"><h4>Hình Ảnh Sản Phẩm</h4></label>
                             <input type="file" required class="form-control" name="product_image">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Mô Tả Sản Phẩm</label>
+                            <label for="exampleInputPassword1"><h4>Mô Tả Sản Phẩm</h4></label>
                             <textarea style="resize:none" required name="product_desc" cols="55" rows="7"placeholder="Mô Tả Sản Phẩm"></textarea>
                             {{-- <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> --}}
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Nội Dung Sản Phẩm</label>
+                            <label for="exampleInputPassword1"><h4>Nội Dung Sản Phẩm</h4></label>
                             <textarea style="resize:none" required name="product_content" cols="55" rows="7"placeholder="Nội Dung Sản Phẩm"></textarea>
                             {{-- <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> --}}
                         </div>
 
                         <div class="form-group">
-                            <label>Danh Mục Sản Phẩm</label>
+                            <label><h4>Danh Mục Sản Phẩm</h4></label>
                             <select class="anhien" name="product_cate">
                                 @foreach($cate_product as $key => $cate)
 
@@ -48,7 +48,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Thương Hiệu Sản Phẩm</label>
+                            <label><h4>Thương Hiệu Sản Phẩm</h4></label>
                             <select class="anhien" name="product_brand">
 
                                 @foreach($brand_product as $key => $brand)
@@ -60,7 +60,7 @@
                         </div>
                         
                         <div class="form-group">
-                            <label>Hiển Thị</label>
+                            <label><h4>Hiển Thị</h4></label>
                             <select class="anhien" name="product_status">
                                 <option value="0">Ẩn</option>
                                 <option value="1">Hiện</option>

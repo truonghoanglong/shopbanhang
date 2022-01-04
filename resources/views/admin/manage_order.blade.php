@@ -3,7 +3,7 @@
 <div class="table-agile-info">
     <div class="">
       <div class="panel-heading">
-        Liệt Kê Đơn Hàng
+        <h3 style="color:rgb(79,146,255)">Liệt Kê Đơn Hàng</h3>
       </div>
       <div class="row w3-res-tb">
         {{-- <div class="col-sm-5 m-b-xs"> --}}
@@ -41,7 +41,7 @@
               </th>
               <th>Tên Người Đặt Hàng</th>
               <th>Tổng Giá Tiền</th>
-              <th>TÌnh Trạng Đơn Hàng</th>
+              {{-- <th>TÌnh Trạng Đơn Hàng</th> --}}
               <th>Hiển Thị Chi Tiết</th>
               <th style="width:30px;"></th>
             </tr>
@@ -52,7 +52,7 @@
               <td><label class="i-checks m-b-none"><input type="hidden" name="post[]"><i></i></label></td>
               <td>{{$order -> customer_name}}</td>
               <td>{{$order -> order_total}}</td>
-              <td>{{$order -> order_status}}</td>
+              {{-- <td>{{$order -> order_status}}</td> --}}
               
 
               <td>

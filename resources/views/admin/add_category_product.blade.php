@@ -5,7 +5,7 @@
     <div class="col-lg-12">
             <section class="panel">
                 <header class="panel-heading">
-                    <h3>Thêm Danh Mục Sản Phẩm</h3>
+                    <h3 style="color:rgb(79,146,255)">Thêm Danh Mục Sản Phẩm</h3>
                 </header>
                 <div class="panel-body">
                    
@@ -13,12 +13,12 @@
                     <form role="form" action="{{URL::to('/save-category-product')}}" method="post">
                         {{csrf_field()}}
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Tên Danh Mục</label>
+                            <label style="margin-top:50px" for="exampleInputEmail1"><h4>Tên Danh Mục</h4></label>
                             <input type="text" required class="form-control" name="categry_product_name" placeholder="Danh Mục Sản Phẩm">
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Mô Tả Danh Mục</label>
+                            <label style="margin-top:50px" for="exampleInputPassword1"><h4>Mô Tả Danh Mục</h4></label>
                             <textarea name="categry_product_desc" required cols="55" rows="7"placeholder="Mô Tả Danh Mục"></textarea>
                             {{-- <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> --}}
                         </div>
@@ -26,7 +26,7 @@
                         
                         
                         <div class="form-group">
-                            <label>Hiển Thị</label>
+                            <label style="margin-top:50px"><h4>Hiển Thị</h4></label>
                             <select class="anhien" name="category_product_status">
                                 <option value="0">Ẩn</option>
                                 <option value="1">Hiện</option>
