@@ -47,9 +47,9 @@ class BrandProduct extends Controller
         // $data['brand_desc'] = $request->brand_product_desc;
         // $data['brand_status'] = $request->brand_product_status;
         // DB::table('tbl_brand')->insert($data);
-        //KHONG SU DỤNG MODEL
+        //KHONG M
 
-        //SU DỤNG MODEL
+        // MODEL
 
         $data = $request->all();
         $brand = new Brand();

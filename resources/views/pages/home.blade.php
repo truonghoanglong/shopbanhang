@@ -152,7 +152,7 @@
 
 
         <div class="section-footer">
-            <a href="{{URL::to('product-show')}}" class="btn-flat btn-hover">view all</a>
+            <a href="{{URL::to('product-show')}}" class="btn-flat btn-hover">xem thêm</a>
         </div>
     </div>
 </div>

@@ -52,7 +52,7 @@
                         </li>
                     </ul>
                     <ul class="devided">
-                        <li><a href="#">Yêu Thích</a></li>
+                       
                         
                         <?php
                                    $customer_id = Session::get('customer_id');

@@ -1,6 +1,6 @@
 @extends('admin_layout')
 @section('admin_content')
-<link href="{{asset('public/backend/css/add-category.css')}}" rel="stylesheet">
+
 <div class="row">
     <div class="col-lg-12">
             <section class="panel">
