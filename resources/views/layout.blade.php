@@ -123,7 +123,7 @@
             <div class="bg-second">
                 <div class="bottom-header container">
                     <ul class="main-menu">
-                        <li><a href="{{URL::to('/')}}">home</a></li>
+                        <li><a href="{{URL::to('/')}}">Trang Chủ</a></li>
                         <!-- mega menu -->
                         <li><a href="{{URL::to('/product-show')}}">Shop</a></li>
                         <!-- end mega menu -->

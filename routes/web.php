@@ -94,6 +94,12 @@ Route::post('/save-checkout-customer','CheckoutController@save_checkout_customer
 Route::post('/login-customer','CheckoutController@login_customer');
 Route::post('/order-place','CheckoutController@order_place');
 Route::get('/payment','CheckoutController@payment');
+//xacthuc
+Route::get('/unactive-order/{order_id}','CheckoutController@unactive_order');
+Route::get('/active-order/{order_id}','CheckoutController@active_order');
+
+
+
 
 //send_mail
 Route::get('/send-mail','MaillController@send_mail');

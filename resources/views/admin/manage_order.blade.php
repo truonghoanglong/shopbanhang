@@ -41,7 +41,7 @@
               </th>
               <th>Tên Người Đặt Hàng</th>
               <th>Tổng Giá Tiền</th>
-              {{-- <th>TÌnh Trạng Đơn Hàng</th> --}}
+              <th>TÌnh Trạng Đơn Hàng</th>
               <th>Hiển Thị Chi Tiết</th>
               <th style="width:30px;"></th>
             </tr>
@@ -53,7 +53,23 @@
               <td>{{$order -> customer_name}}</td>
               <td>{{$order -> order_total}}</td>
               {{-- <td>{{$order -> order_status}}</td> --}}
-              
+                  <td>
+                    <?php
+                      if($order->order_status == 1){
+                    ?>
+                      <a href="{{URL::to('/unactive-order/'.$order->order_id)}}" class="dis-like"><button 
+                        style="background-color: #8d423c; padding:10px; color:white; border:none; border-radius:5px; cursor: pointer; "
+                        >Đang chờ xử lý</button></a>
+                    <?php
+                      }else{
+                    ?>
+                      <a href="{{URL::to('/active-order/'.$order->order_id)}}" class="like"><button
+                        style="background-color:#4CAF50; padding:10px; color:white; border:none; border-radius:5px; cursor: pointer; "
+                        >Đã giao hàng</button></a>
+                    <?php
+                    }
+                    ?>
+                  </td>
 
               <td>
                 <a href="{{URL::to('/view-order/'.$order->order_id)}}" class="active edit" ><i style="margin-left:60px" class='bx bxs-copy-alt'></i></a>

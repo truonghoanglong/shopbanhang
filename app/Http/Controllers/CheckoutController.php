@@ -98,7 +98,7 @@ class CheckoutController extends Controller
         //inset payment_method
         $data= array();
         $data['payment_method'] = $request -> payment_option;
-        $data['payment_status'] = 'Đang chờ xử lý';
+        $data['payment_status'] = 1;
         $payment_id = DB::table('tbl_payment')->insertGetId($data);
 
         //inset order
@@ -107,7 +107,7 @@ class CheckoutController extends Controller
         $order_data['shipping_id'] = Session::get('shipping_id');
         $order_data['payment_id'] =  $payment_id ;
         $order_data['order_total'] = Cart::total();
-        $order_data['order_status'] = 'Đang chờ xử lý';
+        $order_data['order_status'] = 1;
         $order_id = DB::table('tbl_order')->insertGetId($order_data);
 
         //inset order_details
@@ -168,5 +168,22 @@ class CheckoutController extends Controller
         $manager_order_by_id = view('admin.view_order')->with('order_by_id', $order_by_id);
         return view('admin_layout')->with('admin.view_order',$manager_order_by_id);      
 
+    }
+
+    //xac thuc
+    public function unactive_order($order_id){
+        $this->AuthLogin();
+
+        DB::table('tbl_order')->where('order_id',$order_id)->update(['order_status'=>0]);
+        Session::put('message','Xác thực giao hàng');
+        return redirect::to('manage-order');
+    }
+
+    public function active_order($order_id){
+        $this->AuthLogin();
+
+        DB::table('tbl_order')->where('order_id',$order_id)->update(['order_status'=>1]);
+        Session::put('message','Hàng chưa được giao');
+        return redirect::to('manage-order');
     }
 }

@@ -4,7 +4,7 @@
     <div class="col-lg-12">
             <section class="panel">
                 <header class="panel-heading">
-                    Cập Nhật Sản Phẩm Sản Phẩm
+                    <h3 style="color:rgb(79,146,255)">Cập Nhật Sản Phẩm Sản Phẩm</h3>
                 </header>
                 <div class="panel-body">
                    
@@ -72,7 +72,7 @@
                             </select>
                         </div>
                         
-                        <button type="submit" class="submit" name="add_product">Cập Nhật Sản Phẩm</button> <br> <br> <br> <br> 
+                        <button style="width:150px; background:rgb(79,146,255)" type="submit" class="submit" type="submit" class="submit" name="add_product">Cập Nhật Sản Phẩm</button> <br> <br> <br> <br> 
                         <?php 
                             $message = Session::get('message');
                             if($message){
